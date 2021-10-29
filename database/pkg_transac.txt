@@ -1,0 +1,54 @@
+create package pkg_Cryptostake_transac is
+    procedure TRANSAC_vente(p_compte_id in COMPTE.PERS_ID%type, p_crypto_id in CRYPTO.CRYPT_ID%type,
+                            p_transac_quantité in TRANSAC.TRANSAC_QUANTITÉ%type);
+end pkg_Cryptostake_transac;
+
+create package body pkg_Cryptostake_transac is
+    procedure TRANSAC_vente(p_compte_id in COMPTE.PERS_ID%type, p_crypto_id in CRYPTO.CRYPT_ID%type,
+                            p_transac_quantité in TRANSAC.TRANSAC_QUANTITÉ%type) is
+
+
+        ----vente Boolean = 1
+        v_transac_id            TRANSAC%rowtype;
+        v_transactiontype       int ;
+        v_crypto_prix_v         CRYPTO.CRYPT_VENTE%type;
+        v_crypto_prix_a         CRYPTO.CRYPT_VENTE%type;
+
+        ---TODO declacration type table Benefice
+        v_benefice              number(5, 6);
+        v_balance_bennefice_act number(5, 6);
+        v_balance_bennefice_new number(5, 6);
+        v_balance_compte float;
+    begin
+
+        ----fabriquer incrementation Id
+        select max(TRANSAC_ID) into v_transac_id.TRANSAC_ID from TRANSAC;
+
+        begin
+            ------TODO insertion Benefice platforem
+            select CRYPT_VENTE in v_crypto_prix_v from CRYPTO where CRYPT_ID = p_crypto_id;
+            select CRYPT_VENTE in v_crypto_prix_a from CRYPTO where CRYPT_ID = p_crypto_id;
+
+            ---calcul Benefice
+
+                v_benefice = p_transac_quantité * v_crypto_prix_v - p_transac_quantité * v_crypto_prix_a;
+                v_balance_bennefice_new = v_balance_bennefice_act + v_benefice;
+
+
+                insert into TRANSAC (TRANSAC_ID, COMPT_ID, CRYPT_ID, TRANSAC_DATE, TRANSAC_QUANTITÉ, TRANSAC_TYPE,
+                                     TRANSAC_PRIX)
+                values (v_transac_id + 1, p_compte_id, p_crypto_id, CURRENT_DATE, p_transac_quantité,v_transactiontype,
+                        p_transac_quantité * v_crypto_prix_v);
+
+                ---insription des benfices
+                ---- update de la valeur du compte
+            select COMPT_VAL into v_balance_compte from COMPTE;
+            update COMPTE set COMPT_VAL = v_balance_compte+v_crypto_prix_a where COMPT_ID=p_compte_id;
+
+        end;
+    exception
+        when no_data_found then if (v_transac_id is null) then v_transac_id := 1; end if;
+    end;
+end;
+/
+

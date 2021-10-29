@@ -1,0 +1,50 @@
+create package pkg_CryptoStake_user is
+    procedure ajoutUtilisateur(nom in PERS.PERS_NOM%TYPE, prenom in PERS.PERS_PRENOM%TYPE,
+                               username in PERS.PERS_USERNAME%TYPE, password in PERS.PERS_PASSWORD%TYPE, v_apport int);
+    FUNCTION checkuser(username IN VARCHAR2, password IN VARCHAR2) RETURN VARCHAR2;
+end pkg_CryptoStake_user;
+/
+
+create package body pkg_CryptoStake_user is
+
+    procedure ajoutUtilisateur(nom in PERS.PERS_NOM%TYPE, prenom in PERS.PERS_PRENOM%TYPE,
+                               username in PERS.PERS_USERNAME%TYPE, password in PERS.PERS_PASSWORD%TYPE,
+                               v_apport int) is
+
+        v_id_user   PERS.pers_id%type;
+        v_id_compte COMPTE.compt_id%type;
+    begin
+        select max(PERS_ID) + 1 into v_id_user from PERS;
+        select max(COMPT_ID) + 1 into v_id_compte from COMPTE;
+        if v_id_user is null then
+            v_id_user := 1;
+        end if;
+        if v_id_compte is null then
+            v_id_compte := 1;
+        end if;
+        begin
+            insert into PERS values (v_id_user, nom, prenom, username, password);
+            insert into COMPTE values (v_id_compte, v_id_user, v_apport);
+        end;
+    end ajoutUtilisateur;
+
+
+    FUNCTION checkuser(username IN VARCHAR2, password IN VARCHAR2) RETURN VARCHAR2 AS
+        id_found NUMBER;
+    BEGIN
+        SELECT COUNT(*)
+        INTO id_found
+        FROM PERS
+        WHERE PERS_USERNAME = username
+          AND PERS_PASSWORD = password;
+        IF id_found = 0 THEN
+            RETURN 0;
+        ELSE
+            RETURN 1;
+        END IF;
+    END;
+
+
+end pkg_CryptoStake_user;
+/
+

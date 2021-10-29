@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "6UTlbWifwMXcRx8ZnHorV2JjRsj7dSpMVz7YAyzr0FwxJg+TXwagMKwwAF2zwx9v585Sdz5l9kPSz5h+nt14Rg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\archy\\source\\repos\\JsonListManipulation\\JsonListManipulation\\JsonListManipulation.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\archy\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,16 @@
+C:\Users\archy\source\repos\sandboxAPi\sandboxAPi\bin\Debug\netcoreapp3.1\sandboxAPi.exe
+C:\Users\archy\source\repos\sandboxAPi\sandboxAPi\bin\Debug\netcoreapp3.1\sandboxAPi.deps.json
+C:\Users\archy\source\repos\sandboxAPi\sandboxAPi\bin\Debug\netcoreapp3.1\sandboxAPi.runtimeconfig.json
+C:\Users\archy\source\repos\sandboxAPi\sandboxAPi\bin\Debug\netcoreapp3.1\sandboxAPi.runtimeconfig.dev.json
+C:\Users\archy\source\repos\sandboxAPi\sandboxAPi\bin\Debug\netcoreapp3.1\sandboxAPi.dll
+C:\Users\archy\source\repos\sandboxAPi\sandboxAPi\bin\Debug\netcoreapp3.1\sandboxAPi.pdb
+C:\Users\archy\source\repos\sandboxAPi\sandboxAPi\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\archy\source\repos\sandboxAPi\sandboxAPi\obj\Debug\netcoreapp3.1\sandboxAPi.csproj.AssemblyReference.cache
+C:\Users\archy\source\repos\sandboxAPi\sandboxAPi\obj\Debug\netcoreapp3.1\sandboxAPi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\archy\source\repos\sandboxAPi\sandboxAPi\obj\Debug\netcoreapp3.1\sandboxAPi.AssemblyInfoInputs.cache
+C:\Users\archy\source\repos\sandboxAPi\sandboxAPi\obj\Debug\netcoreapp3.1\sandboxAPi.AssemblyInfo.cs
+C:\Users\archy\source\repos\sandboxAPi\sandboxAPi\obj\Debug\netcoreapp3.1\sandboxAPi.csproj.CoreCompileInputs.cache
+C:\Users\archy\source\repos\sandboxAPi\sandboxAPi\obj\Debug\netcoreapp3.1\sandboxAPi.csproj.CopyComplete
+C:\Users\archy\source\repos\sandboxAPi\sandboxAPi\obj\Debug\netcoreapp3.1\sandboxAPi.dll
+C:\Users\archy\source\repos\sandboxAPi\sandboxAPi\obj\Debug\netcoreapp3.1\sandboxAPi.pdb
+C:\Users\archy\source\repos\sandboxAPi\sandboxAPi\obj\Debug\netcoreapp3.1\sandboxAPi.genruntimeconfig.cache
