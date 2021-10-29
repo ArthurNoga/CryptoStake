@@ -1,14 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MetroFramework.Forms;
+using System;
 using System.Windows.Forms;
-using MetroFramework;
-using MetroFramework.Forms;
 
 
 namespace CryptoStake_v3
@@ -45,7 +37,7 @@ namespace CryptoStake_v3
         private void btn_walletMain_Click(object sender, EventArgs e)
         {
             tbc_Main.SelectedTab = tbp_wallet;
-           
+
         }
 
         private void v_Click(object sender, EventArgs e)
@@ -63,9 +55,9 @@ namespace CryptoStake_v3
         private void ChartLoader()
         {
 
-            chart1.Series["portfolio"].Points.AddXY("btc",1300);
+            chart1.Series["portfolio"].Points.AddXY("btc", 1300);
             chart1.Series["portfolio"].Points.AddXY("Eth", 800);
-            chart1.Series["portfolio"].Points.AddXY("Xrp",10000);
+            chart1.Series["portfolio"].Points.AddXY("Xrp", 10000);
             chart1.Series["portfolio"].Points.AddXY("Ada", 4000);
         }
 
@@ -90,9 +82,9 @@ namespace CryptoStake_v3
         private void bnt_homeMain_Click(object sender, EventArgs e)
         {
 
-      
-                tbc_Main.SelectedTab = tbp_home;
-        
+
+            tbc_Main.SelectedTab = tbp_home;
+
         }
 
     }

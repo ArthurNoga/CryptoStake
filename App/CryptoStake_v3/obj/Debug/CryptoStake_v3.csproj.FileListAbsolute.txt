@@ -68,3 +68,6 @@ D:\CryptoStake\CryptoStake\App\CryptoStake_v3\obj\Debug\CryptoStake_v3.csproj.Ge
 D:\CryptoStake\CryptoStake\App\CryptoStake_v3\obj\Debug\CryptoStake_v3.csproj.CoreCompileInputs.cache
 D:\CryptoStake\CryptoStake\App\CryptoStake_v3\obj\Debug\CryptoStake_v3.exe
 D:\CryptoStake\CryptoStake\App\CryptoStake_v3\obj\Debug\CryptoStake_v3.pdb
+D:\CryptoStake\CryptoStake\App\CryptoStake_v3\bin\Debug\Newtonsoft.Json.dll
+D:\CryptoStake\CryptoStake\App\CryptoStake_v3\bin\Debug\Newtonsoft.Json.xml
+D:\CryptoStake\CryptoStake\App\CryptoStake_v3\obj\Debug\CryptoStake_v3.csproj.CopyComplete

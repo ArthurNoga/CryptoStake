@@ -1,12 +1,12 @@
 -- -----------------------------------------------------------------------------
---             Génération d'une base de données pour
+--             Gï¿½nï¿½ration d'une base de donnï¿½es pour
 --                      Oracle Version 10g
 --                        (29/10/2021 15:47:16)
 -- -----------------------------------------------------------------------------
 --      Nom de la base : MLR1
 --      Projet : Espace de travail
 --      Auteur : Noguera Arthur
---      Date de dernière modification : 8/10/2021 14:14:21
+--      Date de derniï¿½re modification : 8/10/2021 14:14:21
 -- -----------------------------------------------------------------------------
 
 DROP TABLE PERS CASCADE CONSTRAINTS;
@@ -70,7 +70,7 @@ CREATE TABLE TRANSAC
     COMPT_ID NUMBER(3)  NOT NULL,
     CRYPT_ID NUMBER(10)  NOT NULL,
     TRANSAC_DATE DATE  NOT NULL,
-    TRANSAC_QUANTITÉ NUMBER(10)  NOT NULL,
+    TRANSAC_QUANTITï¿½ NUMBER(10)  NOT NULL,
     TRANSAC_TYPE NUMBER(1)  NOT NULL,
     TRANSAC_PRIX NUMBER(10,5)  NULL
 ,   CONSTRAINT PK_TRANSAC PRIMARY KEY (TRANSAC_ID)  
@@ -115,10 +115,11 @@ CREATE UNIQUE INDEX I_FK_COMPTE_PERS
 
 CREATE TABLE CRYPTO
    (
-    CRYPT_ID NUMBER(10)  NOT NULL,
+    CRYPT_ID VARCHAR2(32)  NOT NULL,
     CRYPT_NOM VARCHAR2(32)  NOT NULL,
     CRYPT_ACHAT NUMBER(10,4)  NOT NULL,
     CRYPT_VENTE NUMBER(10,2)  NULL
+    CRYPT_EVOL NUMBER (10,4) NOT NULL,
 ,   CONSTRAINT PK_CRYPTO PRIMARY KEY (CRYPT_ID)  
    ) ;
 

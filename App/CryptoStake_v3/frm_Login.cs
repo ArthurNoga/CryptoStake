@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using MetroFramework;
+﻿using MetroFramework;
 using MetroFramework.Forms;
+using System;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace CryptoStake_v3
 {
@@ -21,19 +15,20 @@ namespace CryptoStake_v3
         {
             InitializeComponent();
 
-         
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-          
+
         }
 
         private void btn_login_Click(object sender, EventArgs e)
         {
             Boolean isValid = false;
-            if (txt_username.Text == "error") {
-                MetroMessageBox.Show(this,"Username ou Password incorrect","Problème lors de la Connection",MessageBoxButtons.OK,MessageBoxIcon.Asterisk);
+            if (txt_username.Text == "error")
+            {
+                MetroMessageBox.Show(this, "Username ou Password incorrect", "Problème lors de la Connection", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
             else if (txt_username.Text == "ok") { isValid = true; }
             if (isValid)
@@ -42,13 +37,13 @@ namespace CryptoStake_v3
                 main.Show();
                 this.Hide();
             }
-           
+
         }
 
         private void btn_inscrip_Click(object sender, EventArgs e)
         {
-            if(ContainsNumber(txt_Inscrip_nom.Text)|| ContainsNumber(txt_Inscrip_Prenom.Text)) { MetroMessageBox.Show(this, "Le prenom ou le nom contient un chiffre","Un paramètre est faux",MessageBoxButtons.OK, MessageBoxIcon.Asterisk); }
-            
+            if (ContainsNumber(txt_Inscrip_nom.Text) || ContainsNumber(txt_Inscrip_Prenom.Text)) { MetroMessageBox.Show(this, "Le prenom ou le nom contient un chiffre", "Un paramètre est faux", MessageBoxButtons.OK, MessageBoxIcon.Asterisk); }
+
             else { MetroMessageBox.Show(this, "Merci de vous etre inscrit sur CryptoStake", "Inscritpion Réussie", MessageBoxButtons.OK, MessageBoxIcon.Asterisk); }
         }
 
