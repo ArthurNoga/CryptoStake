@@ -1,4 +1,5 @@
-﻿using MetroFramework;
+﻿using CryptoStake_v3.Services;
+using MetroFramework;
 using MetroFramework.Forms;
 using System;
 using System.Linq;
@@ -15,7 +16,8 @@ namespace CryptoStake_v3
         {
             InitializeComponent();
 
-
+            JDBC database = JDBC.GetInstance();
+            database.InsertCryptos();
         }
 
         private void Form1_Load(object sender, EventArgs e)
