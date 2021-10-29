@@ -83,6 +83,9 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Domaine\Crypto.cs" />
+    <Compile Include="Domaine\Transaction.cs" />
+    <Compile Include="Domaine\User.cs" />
     <Compile Include="frm_Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +100,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Crypto_API.cs" />
+    <Compile Include="Services\JDBC.cs" />
     <None Include="Resources\logo_transparent.png" />
     <None Include="Resources\facebook_cover_photo_2.png" />
     <EmbeddedResource Include="frm_Login.resx">
@@ -142,5 +147,6 @@
     <None Include="Resources\home.png" />
     <None Include="Resources\user.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
