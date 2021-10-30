@@ -29,10 +29,9 @@ namespace CryptoStake_v3.Services
             foreach (var e in json.SelectToken("data"))
             {
                 String name = (String)json.SelectToken("data[" + cpt + "].name");
-                String id = (String)json.SelectToken("data[" + cpt + "].id");
+                String id = (String)json.SelectToken("data[" + cpt + "].symbol");
                 String prix = (String)json.SelectToken("data[" + cpt + "].quote.CHF.price");
                 String evolution = (String)json.SelectToken("data[" + cpt + "].quote.CHF.percent_change_24h");
-
                 Crypto crypto = new Crypto(id, name, float.Parse(prix), float.Parse(evolution));
                 cryptos.Add(crypto);
                 cpt++;

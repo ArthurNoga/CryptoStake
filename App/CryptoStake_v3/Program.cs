@@ -1,5 +1,7 @@
-﻿using System;
+﻿using CryptoStake_v3.Services;
+using System;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace CryptoStake_v3
 {
@@ -14,8 +16,8 @@ namespace CryptoStake_v3
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frm_Login());
+          
             
-
         }
     }
 }

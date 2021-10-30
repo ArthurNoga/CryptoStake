@@ -1,5 +1,7 @@
-﻿using MetroFramework.Forms;
+﻿using CryptoStake_v3.Services;
+using MetroFramework.Forms;
 using System;
+using System.Threading;
 using System.Windows.Forms;
 
 
@@ -10,10 +12,21 @@ namespace CryptoStake_v3
         public frm_main()
         {
             InitializeComponent();
+        
+
+
         }
 
         private void frm_main_Load(object sender, EventArgs e)
         {
+          
+            JDBC database = JDBC.GetInstance();
+            database.InsertCryptos();
+            new Thread(() => {
+                database.InsertCryptos();
+                Thread.Sleep(5000);
+            }).Start();
+
 
             ChartLoader();
         }

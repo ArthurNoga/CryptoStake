@@ -3,6 +3,7 @@ using Oracle.ManagedDataAccess.Client;
 using System;
 using System.Collections;
 using System.Data;
+using System.Threading;
 
 namespace CryptoStake_v3.Services
 {
@@ -10,7 +11,9 @@ namespace CryptoStake_v3.Services
     {
 
 
-        private JDBC() { }
+        private JDBC() {
+   
+        }
 
         OracleConnection con = new OracleConnection(ConnectionString);
         private static String admin = "USER ID=SYSTEM;;Password=AZertyui21!;Data Source= localhost:1521 / XE; PERSIST SECURITY INFO = True";
@@ -22,7 +25,7 @@ namespace CryptoStake_v3.Services
 
         private static String user = "USER ID=UserCryptoStake;;Password=AZertyui21!;Data Source= localhost:1521 / XE; PERSIST SECURITY INFO = True";
         private static String ConnectionString { get; set; } = admin;
-      
+
         private static JDBC _instance;
 
         public static JDBC GetInstance()
@@ -66,7 +69,7 @@ namespace CryptoStake_v3.Services
                         int nameInbdex = dataReader.GetOrdinal("pers_nom");
                         String name = dataReader.GetString(nameInbdex);
                         int prenomInbdex = dataReader.GetOrdinal("pers_prenom");
-                   
+
                     }
                 }
             }
@@ -92,23 +95,31 @@ namespace CryptoStake_v3.Services
         }
 
 
-        public void InsertCryptos() {
-
-            //   ArrayList cryptos= Crypto_API.GetCryptosFrmApi();
-            Crypto test = new Crypto("chfd", "Xrp", 3.000, 1.00);
-      
-                InsertCrypto(test);
+        public void InsertCryptos()
+        {
           
-        
-        
+                ArrayList cryptos = Crypto_API.GetCryptosFrmApi();
+
+                foreach (Crypto crypto in cryptos)
+                {
+                    InsertCrypto(crypto);
+                }
+ 
+         
+           
+
+
+
+
+
         }
         public void InsertCrypto(Crypto crypto)
         {
 
-            String sql = "pkg_managecrypto.Add_updateCrypto";
+            String sql = "pkg_manage_crypto.Add_updateCrypto";
             OracleCommand req = new OracleCommand(sql, con);
             req.CommandType = CommandType.StoredProcedure;
-            req.Parameters.Add("CRYPT_ID", OracleDbType.Varchar2).Value =crypto.id;
+            req.Parameters.Add("CRYPT_ID", OracleDbType.Varchar2).Value = crypto.id;
             req.Parameters.Add("CRYPT_NOM", OracleDbType.Varchar2).Value = crypto.nom;
             req.Parameters.Add("CRYPT_ACHAT", OracleDbType.Double).Value = crypto.prixAch;
             req.Parameters.Add("CRYPT_VENTE", OracleDbType.Double).Value = crypto.prixVen;
