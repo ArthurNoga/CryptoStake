@@ -123,6 +123,12 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="crypto_main.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crypto_main.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset.cs" />
     <Compile Include="Domaine\Crypto.cs" />
     <Compile Include="Domaine\Transaction.cs" />
     <Compile Include="Domaine\User.cs" />
@@ -142,6 +148,17 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\Crypto_API.cs" />
     <Compile Include="Services\JDBC.cs" />
+    <None Include="crypto_main.xsc">
+      <DependentUpon>crypto_main.xsd</DependentUpon>
+    </None>
+    <None Include="crypto_main.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>crypto_main.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="crypto_main.xss">
+      <DependentUpon>crypto_main.xsd</DependentUpon>
+    </None>
     <None Include="Oracle.DataAccess.Common.Configuration.Section.xsd">
       <SubType>Designer</SubType>
     </None>

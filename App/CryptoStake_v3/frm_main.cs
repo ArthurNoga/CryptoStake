@@ -12,7 +12,6 @@ namespace CryptoStake_v3
         public frm_main()
         {
             InitializeComponent();
-        
 
 
         }
@@ -20,12 +19,18 @@ namespace CryptoStake_v3
         private void frm_main_Load(object sender, EventArgs e)
         {
           
+
+            // Chargement des valeurs depuis l api et rafraichiessment toute les 15 sec
             JDBC database = JDBC.GetInstance();
             database.InsertCryptos();
-            new Thread(() => {
-                database.InsertCryptos();
-                Thread.Sleep(5000);
-            }).Start();
+            new Thread(() =>
+               {
+                   while (true)
+                   {
+                       database.InsertCryptos();
+                       Thread.Sleep(15000);
+                   }
+               }).Start();
 
 
             ChartLoader();
@@ -45,6 +50,7 @@ namespace CryptoStake_v3
         {
 
         }
+
 
 
         private void btn_walletMain_Click(object sender, EventArgs e)

@@ -3,7 +3,6 @@ using Oracle.ManagedDataAccess.Client;
 using System;
 using System.Collections;
 using System.Data;
-using System.Threading;
 
 namespace CryptoStake_v3.Services
 {
@@ -11,19 +10,17 @@ namespace CryptoStake_v3.Services
     {
 
 
-        private JDBC() {
-   
+        private JDBC()
+        {
+
         }
 
         OracleConnection con = new OracleConnection(ConnectionString);
+
         private static String admin = "USER ID=SYSTEM;;Password=AZertyui21!;Data Source= localhost:1521 / XE; PERSIST SECURITY INFO = True";
 
-        internal static JDBC getInstance()
-        {
-            throw new NotImplementedException();
-        }
 
-        private static String user = "USER ID=UserCryptoStake;;Password=AZertyui21!;Data Source= localhost:1521 / XE; PERSIST SECURITY INFO = True";
+
         private static String ConnectionString { get; set; } = admin;
 
         private static JDBC _instance;
@@ -97,25 +94,17 @@ namespace CryptoStake_v3.Services
 
         public void InsertCryptos()
         {
-          
-                ArrayList cryptos = Crypto_API.GetCryptosFrmApi();
 
-                foreach (Crypto crypto in cryptos)
-                {
-                    InsertCrypto(crypto);
-                }
- 
-         
-           
+            ArrayList cryptos = Crypto_API.GetCryptosFrmApi();
 
-
-
-
+            foreach (Crypto crypto in cryptos)
+            {
+                InsertCrypto(crypto);
+            }
 
         }
         public void InsertCrypto(Crypto crypto)
         {
-
             String sql = "pkg_manage_crypto.Add_updateCrypto";
             OracleCommand req = new OracleCommand(sql, con);
             req.CommandType = CommandType.StoredProcedure;
@@ -127,11 +116,20 @@ namespace CryptoStake_v3.Services
             con.Open();
             req.ExecuteNonQuery();
             con.Close();
-
-
-
         }
 
+        public DataSet fillDataset(String table)
+        {
+            String sql = "select * from " + table;
+            OracleCommand req = new OracleCommand(sql, con);
+            req.CommandType = CommandType.Text;
+
+            OracleDataAdapter da = new OracleDataAdapter(req);
+            OracleCommandBuilder cb = new OracleCommandBuilder(da);
+            DataSet ds = new DataSet();
+
+            return ds;
+        }
     }
 }
 
