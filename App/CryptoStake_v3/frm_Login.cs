@@ -23,7 +23,7 @@ namespace CryptoStake_v3
         private void Form1_Load(object sender, EventArgs e)
         {
             JDBC database = JDBC.GetInstance();
-            database.InsertCryptos();
+            database.InsertALLCryptosToDB();
         }
 
         private void btn_login_Click(object sender, EventArgs e)
