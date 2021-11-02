@@ -144,6 +144,11 @@
     <Compile Include="frm_main.Designer.cs">
       <DependentUpon>frm_main.cs</DependentUpon>
     </Compile>
+    <Compile Include="home.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>home.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\Crypto_API.cs" />
@@ -158,6 +163,17 @@
     </None>
     <None Include="crypto_main.xss">
       <DependentUpon>crypto_main.xsd</DependentUpon>
+    </None>
+    <None Include="home.xsc">
+      <DependentUpon>home.xsd</DependentUpon>
+    </None>
+    <None Include="home.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>home.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="home.xss">
+      <DependentUpon>home.xsd</DependentUpon>
     </None>
     <None Include="Oracle.DataAccess.Common.Configuration.Section.xsd">
       <SubType>Designer</SubType>

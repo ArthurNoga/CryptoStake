@@ -1,6 +1,7 @@
 ﻿using CryptoStake_v3.Services;
 using MetroFramework.Forms;
 using System;
+using System.Data;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -18,7 +19,8 @@ namespace CryptoStake_v3
 
         private void frm_main_Load(object sender, EventArgs e)
         {
-          
+            // TODO: This line of code loads data into the 'home.CRYPTO' table. You can move, or remove it, as needed.
+            this.cRYPTOTableAdapter.Fill(this.home.CRYPTO);
 
             // Chargement des valeurs depuis l api et rafraichiessment toute les 15 sec
             JDBC database = JDBC.GetInstance();
@@ -106,5 +108,24 @@ namespace CryptoStake_v3
 
         }
 
+        private void txt_searchMain_TextChanged(object sender, EventArgs e)
+        {
+            
+           
+            
+        }
+
+        private void fillByToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.cRYPTOTableAdapter.FillBy(this.home.CRYPTO);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
     }
 }

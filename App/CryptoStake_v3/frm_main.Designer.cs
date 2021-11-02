@@ -58,7 +58,7 @@ namespace CryptoStake_v3
             this.pnl_searchHome = new System.Windows.Forms.Panel();
             this.title_home = new MetroFramework.Controls.MetroTile();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txt_searchMain = new System.Windows.Forms.TextBox();
             this.dtg_Crypto = new System.Windows.Forms.DataGridView();
             this.tbp_wallet = new System.Windows.Forms.TabPage();
             this.pnl_chart = new System.Windows.Forms.Panel();
@@ -76,11 +76,6 @@ namespace CryptoStake_v3
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.tbp_shop = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnl_searchAchatVente = new System.Windows.Forms.Panel();
             this.lbl_searchTopScorer = new System.Windows.Forms.Label();
             this.txt_serachTopScorer = new System.Windows.Forms.TextBox();
@@ -111,9 +106,19 @@ namespace CryptoStake_v3
             this.btn_printHebdo = new System.Windows.Forms.Button();
             this.bnt_printMensuel = new System.Windows.Forms.Button();
             this.btn_printAnnuel = new System.Windows.Forms.Button();
-            this.crypto_main = new CryptoStake_v3.crypto_main();
             this.cRYPTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cRYPTOTableAdapter = new CryptoStake_v3.crypto_mainTableAdapters.CRYPTOTableAdapter();
+            this.home = new CryptoStake_v3.home();
+            this.cRYPTOTableAdapter = new CryptoStake_v3.homeTableAdapters.CRYPTOTableAdapter();
+            this.cRYPTIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cRYPTNOMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cRYPTACHATDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cRYPTVENTEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cRYPTEVOLDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cRYPTIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cRYPTNOMDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cRYPTACHATDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cRYPTVENTEDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cRYPTEVOLDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnl_menuMain.SuspendLayout();
             this.pnl_footer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pct_logo)).BeginInit();
@@ -141,8 +146,8 @@ namespace CryptoStake_v3
             this.panel5.SuspendLayout();
             this.pnl_fond.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.crypto_main)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cRYPTOBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.home)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -152,7 +157,7 @@ namespace CryptoStake_v3
             this.panel1.Location = new System.Drawing.Point(84, 46);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1252, 52);
+            this.panel1.Size = new System.Drawing.Size(1292, 52);
             this.panel1.TabIndex = 2;
             // 
             // pnl_menuMain
@@ -169,7 +174,7 @@ namespace CryptoStake_v3
             this.pnl_menuMain.Location = new System.Drawing.Point(0, 46);
             this.pnl_menuMain.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnl_menuMain.Name = "pnl_menuMain";
-            this.pnl_menuMain.Size = new System.Drawing.Size(84, 837);
+            this.pnl_menuMain.Size = new System.Drawing.Size(84, 951);
             this.pnl_menuMain.TabIndex = 1;
             // 
             // btn_logout
@@ -183,7 +188,7 @@ namespace CryptoStake_v3
             this.btn_logout.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_logout.IconSize = 36;
             this.btn_logout.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_logout.Location = new System.Drawing.Point(0, 705);
+            this.btn_logout.Location = new System.Drawing.Point(0, 819);
             this.btn_logout.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_logout.Name = "btn_logout";
             this.btn_logout.Size = new System.Drawing.Size(84, 66);
@@ -299,7 +304,7 @@ namespace CryptoStake_v3
             this.btn_quitter.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_quitter.IconSize = 36;
             this.btn_quitter.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_quitter.Location = new System.Drawing.Point(0, 771);
+            this.btn_quitter.Location = new System.Drawing.Point(0, 885);
             this.btn_quitter.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_quitter.Name = "btn_quitter";
             this.btn_quitter.Size = new System.Drawing.Size(84, 66);
@@ -312,10 +317,10 @@ namespace CryptoStake_v3
             this.pnl_footer.Controls.Add(this.pct_logo);
             this.pnl_footer.Controls.Add(this.panel4);
             this.pnl_footer.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnl_footer.Location = new System.Drawing.Point(84, 729);
+            this.pnl_footer.Location = new System.Drawing.Point(84, 843);
             this.pnl_footer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnl_footer.Name = "pnl_footer";
-            this.pnl_footer.Size = new System.Drawing.Size(1252, 154);
+            this.pnl_footer.Size = new System.Drawing.Size(1292, 154);
             this.pnl_footer.TabIndex = 3;
             // 
             // pct_logo
@@ -325,7 +330,7 @@ namespace CryptoStake_v3
             this.pct_logo.Location = new System.Drawing.Point(0, 0);
             this.pct_logo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pct_logo.Name = "pct_logo";
-            this.pct_logo.Size = new System.Drawing.Size(922, 154);
+            this.pct_logo.Size = new System.Drawing.Size(962, 154);
             this.pct_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pct_logo.TabIndex = 1;
             this.pct_logo.TabStop = false;
@@ -337,7 +342,7 @@ namespace CryptoStake_v3
             this.panel4.Controls.Add(this.lbl_welcome);
             this.panel4.Controls.Add(this.iconPictureBox1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(922, 0);
+            this.panel4.Location = new System.Drawing.Point(962, 0);
             this.panel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(330, 154);
@@ -408,7 +413,7 @@ namespace CryptoStake_v3
             this.tbc_Main.Multiline = true;
             this.tbc_Main.Name = "tbc_Main";
             this.tbc_Main.SelectedIndex = 0;
-            this.tbc_Main.Size = new System.Drawing.Size(1252, 668);
+            this.tbc_Main.Size = new System.Drawing.Size(1292, 782);
             this.tbc_Main.TabIndex = 4;
             // 
             // tbp_home
@@ -419,7 +424,7 @@ namespace CryptoStake_v3
             this.tbp_home.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbp_home.Name = "tbp_home";
             this.tbp_home.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbp_home.Size = new System.Drawing.Size(1244, 642);
+            this.tbp_home.Size = new System.Drawing.Size(1284, 756);
             this.tbp_home.TabIndex = 0;
             this.tbp_home.UseVisualStyleBackColor = true;
             // 
@@ -428,12 +433,12 @@ namespace CryptoStake_v3
             this.pnl_searchHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(35)))), ((int)(((byte)(46)))));
             this.pnl_searchHome.Controls.Add(this.title_home);
             this.pnl_searchHome.Controls.Add(this.label4);
-            this.pnl_searchHome.Controls.Add(this.textBox3);
+            this.pnl_searchHome.Controls.Add(this.txt_searchMain);
             this.pnl_searchHome.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_searchHome.Location = new System.Drawing.Point(4, 5);
             this.pnl_searchHome.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnl_searchHome.Name = "pnl_searchHome";
-            this.pnl_searchHome.Size = new System.Drawing.Size(1236, 45);
+            this.pnl_searchHome.Size = new System.Drawing.Size(1276, 45);
             this.pnl_searchHome.TabIndex = 3;
             // 
             // title_home
@@ -461,13 +466,14 @@ namespace CryptoStake_v3
             this.label4.TabIndex = 3;
             this.label4.Text = "rechercher";
             // 
-            // textBox3
+            // txt_searchMain
             // 
-            this.textBox3.Location = new System.Drawing.Point(553, 9);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(668, 20);
-            this.textBox3.TabIndex = 0;
+            this.txt_searchMain.Location = new System.Drawing.Point(553, 9);
+            this.txt_searchMain.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_searchMain.Name = "txt_searchMain";
+            this.txt_searchMain.Size = new System.Drawing.Size(668, 20);
+            this.txt_searchMain.TabIndex = 0;
+            this.txt_searchMain.TextChanged += new System.EventHandler(this.txt_searchMain_TextChanged);
             // 
             // dtg_Crypto
             // 
@@ -491,6 +497,12 @@ namespace CryptoStake_v3
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dtg_Crypto.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtg_Crypto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtg_Crypto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.cRYPTIDDataGridViewTextBoxColumn,
+            this.cRYPTNOMDataGridViewTextBoxColumn,
+            this.cRYPTACHATDataGridViewTextBoxColumn,
+            this.cRYPTVENTEDataGridViewTextBoxColumn,
+            this.cRYPTEVOLDataGridViewTextBoxColumn});
             this.dtg_Crypto.DataSource = this.cRYPTOBindingSource;
             this.dtg_Crypto.EnableHeadersVisualStyles = false;
             this.dtg_Crypto.Location = new System.Drawing.Point(4, 49);
@@ -499,7 +511,7 @@ namespace CryptoStake_v3
             this.dtg_Crypto.ReadOnly = true;
             this.dtg_Crypto.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dtg_Crypto.RowHeadersVisible = false;
-            this.dtg_Crypto.Size = new System.Drawing.Size(1236, 581);
+            this.dtg_Crypto.Size = new System.Drawing.Size(1276, 695);
             this.dtg_Crypto.TabIndex = 1;
             this.dtg_Crypto.TabStop = false;
             // 
@@ -513,17 +525,17 @@ namespace CryptoStake_v3
             this.tbp_wallet.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbp_wallet.Name = "tbp_wallet";
             this.tbp_wallet.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbp_wallet.Size = new System.Drawing.Size(1244, 642);
+            this.tbp_wallet.Size = new System.Drawing.Size(1284, 756);
             this.tbp_wallet.TabIndex = 1;
             // 
             // pnl_chart
             // 
             this.pnl_chart.Controls.Add(this.chart1);
             this.pnl_chart.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnl_chart.Location = new System.Drawing.Point(787, 5);
+            this.pnl_chart.Location = new System.Drawing.Point(827, 5);
             this.pnl_chart.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnl_chart.Name = "pnl_chart";
-            this.pnl_chart.Size = new System.Drawing.Size(453, 632);
+            this.pnl_chart.Size = new System.Drawing.Size(453, 746);
             this.pnl_chart.TabIndex = 1;
             // 
             // chart1
@@ -550,7 +562,7 @@ namespace CryptoStake_v3
             series1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Berry;
             series1.SmartLabelStyle.CalloutLineColor = System.Drawing.Color.White;
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(453, 632);
+            this.chart1.Size = new System.Drawing.Size(453, 746);
             this.chart1.TabIndex = 1;
             this.chart1.Text = "chart1";
             // 
@@ -564,7 +576,7 @@ namespace CryptoStake_v3
             this.pnl_wallet.Location = new System.Drawing.Point(0, 0);
             this.pnl_wallet.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnl_wallet.Name = "pnl_wallet";
-            this.pnl_wallet.Size = new System.Drawing.Size(774, 652);
+            this.pnl_wallet.Size = new System.Drawing.Size(794, 709);
             this.pnl_wallet.TabIndex = 0;
             // 
             // dtg_portfolio
@@ -595,7 +607,7 @@ namespace CryptoStake_v3
             this.dtg_portfolio.Name = "dtg_portfolio";
             this.dtg_portfolio.ReadOnly = true;
             this.dtg_portfolio.RowHeadersVisible = false;
-            this.dtg_portfolio.Size = new System.Drawing.Size(774, 607);
+            this.dtg_portfolio.Size = new System.Drawing.Size(794, 664);
             this.dtg_portfolio.StandardTab = true;
             this.dtg_portfolio.TabIndex = 4;
             // 
@@ -639,7 +651,7 @@ namespace CryptoStake_v3
             this.pnl_searchPortfolio.Location = new System.Drawing.Point(0, 0);
             this.pnl_searchPortfolio.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnl_searchPortfolio.Name = "pnl_searchPortfolio";
-            this.pnl_searchPortfolio.Size = new System.Drawing.Size(774, 45);
+            this.pnl_searchPortfolio.Size = new System.Drawing.Size(794, 45);
             this.pnl_searchPortfolio.TabIndex = 3;
             // 
             // title_portfolio
@@ -683,7 +695,7 @@ namespace CryptoStake_v3
             this.tbp_shop.Location = new System.Drawing.Point(4, 4);
             this.tbp_shop.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbp_shop.Name = "tbp_shop";
-            this.tbp_shop.Size = new System.Drawing.Size(1244, 642);
+            this.tbp_shop.Size = new System.Drawing.Size(1284, 756);
             this.tbp_shop.TabIndex = 2;
             this.tbp_shop.UseVisualStyleBackColor = true;
             // 
@@ -692,6 +704,7 @@ namespace CryptoStake_v3
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
@@ -706,11 +719,12 @@ namespace CryptoStake_v3
             this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5});
+            this.cRYPTIDDataGridViewTextBoxColumn1,
+            this.cRYPTNOMDataGridViewTextBoxColumn1,
+            this.cRYPTACHATDataGridViewTextBoxColumn1,
+            this.cRYPTVENTEDataGridViewTextBoxColumn1,
+            this.cRYPTEVOLDataGridViewTextBoxColumn1});
+            this.dataGridView1.DataSource = this.cRYPTOBindingSource;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.Location = new System.Drawing.Point(362, 44);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -718,38 +732,8 @@ namespace CryptoStake_v3
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(878, 591);
+            this.dataGridView1.Size = new System.Drawing.Size(922, 712);
             this.dataGridView1.TabIndex = 5;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Name";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "buy";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "Sell";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "% 24h";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
             // pnl_searchAchatVente
             // 
@@ -760,7 +744,7 @@ namespace CryptoStake_v3
             this.pnl_searchAchatVente.Location = new System.Drawing.Point(362, 0);
             this.pnl_searchAchatVente.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnl_searchAchatVente.Name = "pnl_searchAchatVente";
-            this.pnl_searchAchatVente.Size = new System.Drawing.Size(882, 45);
+            this.pnl_searchAchatVente.Size = new System.Drawing.Size(922, 45);
             this.pnl_searchAchatVente.TabIndex = 2;
             // 
             // lbl_searchTopScorer
@@ -792,7 +776,7 @@ namespace CryptoStake_v3
             this.pnl_achat_vente.Location = new System.Drawing.Point(0, 0);
             this.pnl_achat_vente.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnl_achat_vente.Name = "pnl_achat_vente";
-            this.pnl_achat_vente.Size = new System.Drawing.Size(362, 642);
+            this.pnl_achat_vente.Size = new System.Drawing.Size(362, 756);
             this.pnl_achat_vente.TabIndex = 0;
             // 
             // title_AchatVente
@@ -920,7 +904,7 @@ namespace CryptoStake_v3
             this.tbp_facture.Location = new System.Drawing.Point(4, 4);
             this.tbp_facture.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbp_facture.Name = "tbp_facture";
-            this.tbp_facture.Size = new System.Drawing.Size(1244, 642);
+            this.tbp_facture.Size = new System.Drawing.Size(1284, 756);
             this.tbp_facture.TabIndex = 3;
             this.tbp_facture.UseVisualStyleBackColor = true;
             // 
@@ -937,7 +921,7 @@ namespace CryptoStake_v3
             this.pnl_print.Location = new System.Drawing.Point(0, 0);
             this.pnl_print.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnl_print.Name = "pnl_print";
-            this.pnl_print.Size = new System.Drawing.Size(1244, 642);
+            this.pnl_print.Size = new System.Drawing.Size(1284, 756);
             this.pnl_print.TabIndex = 0;
             this.pnl_print.Theme = MetroFramework.MetroThemeStyle.Light;
             this.pnl_print.UseCustomBackColor = true;
@@ -950,7 +934,7 @@ namespace CryptoStake_v3
             this.prnt_prev_facture.Dock = System.Windows.Forms.DockStyle.Fill;
             this.prnt_prev_facture.Location = new System.Drawing.Point(381, 45);
             this.prnt_prev_facture.Name = "prnt_prev_facture";
-            this.prnt_prev_facture.Size = new System.Drawing.Size(863, 597);
+            this.prnt_prev_facture.Size = new System.Drawing.Size(903, 711);
             this.prnt_prev_facture.TabIndex = 4;
             // 
             // title_facturation
@@ -960,7 +944,7 @@ namespace CryptoStake_v3
             this.title_facturation.Dock = System.Windows.Forms.DockStyle.Top;
             this.title_facturation.Location = new System.Drawing.Point(381, 0);
             this.title_facturation.Name = "title_facturation";
-            this.title_facturation.Size = new System.Drawing.Size(863, 45);
+            this.title_facturation.Size = new System.Drawing.Size(903, 45);
             this.title_facturation.TabIndex = 12;
             this.title_facturation.TabStop = false;
             this.title_facturation.Text = "Facturation et Impression";
@@ -980,7 +964,7 @@ namespace CryptoStake_v3
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(381, 642);
+            this.panel5.Size = new System.Drawing.Size(381, 756);
             this.panel5.TabIndex = 2;
             // 
             // button1
@@ -993,7 +977,7 @@ namespace CryptoStake_v3
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(251)))), ((int)(((byte)(253)))));
-            this.button1.Location = new System.Drawing.Point(0, 577);
+            this.button1.Location = new System.Drawing.Point(0, 691);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(381, 65);
@@ -1010,7 +994,7 @@ namespace CryptoStake_v3
             this.pnl_fond.Location = new System.Drawing.Point(0, 255);
             this.pnl_fond.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnl_fond.Name = "pnl_fond";
-            this.pnl_fond.Size = new System.Drawing.Size(381, 387);
+            this.pnl_fond.Size = new System.Drawing.Size(381, 501);
             this.pnl_fond.TabIndex = 3;
             // 
             // lbl_searchPrint
@@ -1141,25 +1125,95 @@ namespace CryptoStake_v3
             this.btn_printAnnuel.Text = "Facture Annuelle";
             this.btn_printAnnuel.UseVisualStyleBackColor = false;
             // 
-            // crypto_main
-            // 
-            this.crypto_main.DataSetName = "crypto_main";
-            this.crypto_main.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // cRYPTOBindingSource
             // 
             this.cRYPTOBindingSource.DataMember = "CRYPTO";
-            this.cRYPTOBindingSource.DataSource = this.crypto_main;
+            this.cRYPTOBindingSource.DataSource = this.home;
+            // 
+            // home
+            // 
+            this.home.DataSetName = "home";
+            this.home.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // cRYPTOTableAdapter
             // 
             this.cRYPTOTableAdapter.ClearBeforeFill = true;
             // 
+            // cRYPTIDDataGridViewTextBoxColumn
+            // 
+            this.cRYPTIDDataGridViewTextBoxColumn.DataPropertyName = "CRYPT_ID";
+            this.cRYPTIDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.cRYPTIDDataGridViewTextBoxColumn.Name = "cRYPTIDDataGridViewTextBoxColumn";
+            this.cRYPTIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cRYPTNOMDataGridViewTextBoxColumn
+            // 
+            this.cRYPTNOMDataGridViewTextBoxColumn.DataPropertyName = "CRYPT_NOM";
+            this.cRYPTNOMDataGridViewTextBoxColumn.HeaderText = "NOM";
+            this.cRYPTNOMDataGridViewTextBoxColumn.Name = "cRYPTNOMDataGridViewTextBoxColumn";
+            this.cRYPTNOMDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cRYPTACHATDataGridViewTextBoxColumn
+            // 
+            this.cRYPTACHATDataGridViewTextBoxColumn.DataPropertyName = "CRYPT_ACHAT";
+            this.cRYPTACHATDataGridViewTextBoxColumn.HeaderText = "ACHAT";
+            this.cRYPTACHATDataGridViewTextBoxColumn.Name = "cRYPTACHATDataGridViewTextBoxColumn";
+            this.cRYPTACHATDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cRYPTVENTEDataGridViewTextBoxColumn
+            // 
+            this.cRYPTVENTEDataGridViewTextBoxColumn.DataPropertyName = "CRYPT_VENTE";
+            this.cRYPTVENTEDataGridViewTextBoxColumn.HeaderText = "VENTE";
+            this.cRYPTVENTEDataGridViewTextBoxColumn.Name = "cRYPTVENTEDataGridViewTextBoxColumn";
+            this.cRYPTVENTEDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cRYPTEVOLDataGridViewTextBoxColumn
+            // 
+            this.cRYPTEVOLDataGridViewTextBoxColumn.DataPropertyName = "CRYPT_EVOL";
+            this.cRYPTEVOLDataGridViewTextBoxColumn.HeaderText = "EVOL";
+            this.cRYPTEVOLDataGridViewTextBoxColumn.Name = "cRYPTEVOLDataGridViewTextBoxColumn";
+            this.cRYPTEVOLDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cRYPTIDDataGridViewTextBoxColumn1
+            // 
+            this.cRYPTIDDataGridViewTextBoxColumn1.DataPropertyName = "CRYPT_ID";
+            this.cRYPTIDDataGridViewTextBoxColumn1.HeaderText = "ID";
+            this.cRYPTIDDataGridViewTextBoxColumn1.Name = "cRYPTIDDataGridViewTextBoxColumn1";
+            this.cRYPTIDDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // cRYPTNOMDataGridViewTextBoxColumn1
+            // 
+            this.cRYPTNOMDataGridViewTextBoxColumn1.DataPropertyName = "CRYPT_NOM";
+            this.cRYPTNOMDataGridViewTextBoxColumn1.HeaderText = "NOM";
+            this.cRYPTNOMDataGridViewTextBoxColumn1.Name = "cRYPTNOMDataGridViewTextBoxColumn1";
+            this.cRYPTNOMDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // cRYPTACHATDataGridViewTextBoxColumn1
+            // 
+            this.cRYPTACHATDataGridViewTextBoxColumn1.DataPropertyName = "CRYPT_ACHAT";
+            this.cRYPTACHATDataGridViewTextBoxColumn1.HeaderText = "ACHAT";
+            this.cRYPTACHATDataGridViewTextBoxColumn1.Name = "cRYPTACHATDataGridViewTextBoxColumn1";
+            this.cRYPTACHATDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // cRYPTVENTEDataGridViewTextBoxColumn1
+            // 
+            this.cRYPTVENTEDataGridViewTextBoxColumn1.DataPropertyName = "CRYPT_VENTE";
+            this.cRYPTVENTEDataGridViewTextBoxColumn1.HeaderText = "VENTE";
+            this.cRYPTVENTEDataGridViewTextBoxColumn1.Name = "cRYPTVENTEDataGridViewTextBoxColumn1";
+            this.cRYPTVENTEDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // cRYPTEVOLDataGridViewTextBoxColumn1
+            // 
+            this.cRYPTEVOLDataGridViewTextBoxColumn1.DataPropertyName = "CRYPT_EVOL";
+            this.cRYPTEVOLDataGridViewTextBoxColumn1.HeaderText = "EVOL";
+            this.cRYPTEVOLDataGridViewTextBoxColumn1.Name = "cRYPTEVOLDataGridViewTextBoxColumn1";
+            this.cRYPTEVOLDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
             // frm_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(1336, 883);
+            this.ClientSize = new System.Drawing.Size(1376, 997);
             this.Controls.Add(this.tbc_Main);
             this.Controls.Add(this.pnl_footer);
             this.Controls.Add(this.panel1);
@@ -1206,8 +1260,8 @@ namespace CryptoStake_v3
             this.pnl_fond.ResumeLayout(false);
             this.pnl_fond.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.crypto_main)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cRYPTOBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.home)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1261,7 +1315,7 @@ namespace CryptoStake_v3
         private System.Windows.Forms.Label lbl_quantité;
         private System.Windows.Forms.Panel pnl_searchHome;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txt_searchMain;
         private System.Windows.Forms.DataGridView dtg_portfolio;
         private System.Windows.Forms.Panel pnl_searchPortfolio;
         private System.Windows.Forms.Label label3;
@@ -1274,11 +1328,6 @@ namespace CryptoStake_v3
         private System.Windows.Forms.DataGridViewTextBoxColumn col_dtgPortfolio_Gain;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_dtgPortfolio_value;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_dtg_facture_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_dtg_facture_Crypto;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_dtg_facture_value;
@@ -1287,8 +1336,18 @@ namespace CryptoStake_v3
         private MetroFramework.Controls.MetroTile title_portfolio;
         private System.Windows.Forms.PrintPreviewControl prnt_prev_facture;
         private MetroFramework.Controls.MetroTile title_facturation;
-        private crypto_main crypto_main;
+        private home home;
         private System.Windows.Forms.BindingSource cRYPTOBindingSource;
-        private crypto_mainTableAdapters.CRYPTOTableAdapter cRYPTOTableAdapter;
+        private homeTableAdapters.CRYPTOTableAdapter cRYPTOTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cRYPTIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cRYPTNOMDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cRYPTACHATDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cRYPTVENTEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cRYPTEVOLDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cRYPTIDDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cRYPTNOMDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cRYPTACHATDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cRYPTVENTEDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cRYPTEVOLDataGridViewTextBoxColumn1;
     }
 }

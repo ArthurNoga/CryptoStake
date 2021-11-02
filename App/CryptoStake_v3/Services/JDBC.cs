@@ -92,18 +92,18 @@ namespace CryptoStake_v3.Services
         }
 
 
-        public void InsertCryptos()
+        public void InsertALLCryptosToDB()
         {
 
             ArrayList cryptos = Crypto_API.GetCryptosFrmApi();
 
             foreach (Crypto crypto in cryptos)
             {
-                InsertCrypto(crypto);
+                InsertCryptoToDB(crypto);
             }
 
         }
-        public void InsertCrypto(Crypto crypto)
+        public void InsertCryptoToDB(Crypto crypto)
         {
             String sql = "pkg_manage_crypto.Add_updateCrypto";
             OracleCommand req = new OracleCommand(sql, con);
