@@ -52,12 +52,12 @@ namespace CryptoStake_v3
             //si vente ou achat
             
           
-            if(txt_achatVente.Text=="ok"||numericUpDown1.Value==0)
+            if(txt_achatVente.Text=="ok"||nud_quantTransac.Value==0)
                 MetroMessageBox.Show(this, "Choisissez un Assets et une quantité", "Champs incomplets", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
             //TODO: verifier si le solde est insufisant ici emulation 
             //TODO : query check solde du compte
-            if (txt_achatVente.Text == "error" || numericUpDown1.Value == 1 & chk_achatVente.Items.Equals("Achat") ){
+            if (txt_achatVente.Text == "error" || nud_quantTransac.Value == 1 & chk_achatVente.Items.Equals("Achat") ){
 
                 MetroMessageBox.Show(this, "Approvisionner votre Compte", "Solde insufisant", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
@@ -107,5 +107,6 @@ namespace CryptoStake_v3
         {
 
         }
+
     }
 }
