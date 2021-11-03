@@ -1,5 +1,4 @@
-﻿using CryptoStake_v3.Services;
-using MetroFramework;
+﻿using MetroFramework;
 using MetroFramework.Forms;
 using System;
 using System.Linq;
@@ -22,18 +21,19 @@ namespace CryptoStake_v3
 
         private void Frm_main_Load(object sender, EventArgs e)
         {
-         //TODO: charger database
+            //TODO: charger database
         }
 
         private void Btn_login_Click(object sender, EventArgs e)
         {
             Boolean isValid = false;
-            if (txt_username.Text == "error"&txt_password.Text=="error")//TODO :query username +login +cryptage Login
+            if (txt_username.Text == "error" & txt_password.Text == "error")//TODO :query username +login +cryptage Login
             {
                 MetroMessageBox.Show(this, "Username ou Password incorrect", "Problème lors de la Connection", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
-           
-            if (txt_password.Text == "" || txt_username.Text == "error") {
+
+            if (txt_password.Text == "" || txt_username.Text == "error")
+            {
                 MetroMessageBox.Show(this, "Password ou login Vide", "Champs incomplets", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
             else if (txt_username.Text == "ok") { isValid = true; }
@@ -50,11 +50,13 @@ namespace CryptoStake_v3
         {
             if (ContainsNumber(txt_Inscrip_nom.Text) || ContainsNumber(txt_Inscrip_Prenom.Text)) { MetroMessageBox.Show(this, "Le prenom ou le nom contient un chiffre", "Un paramètre est faux", MessageBoxButtons.OK, MessageBoxIcon.Asterisk); }
 
-            else {
+            else
+            {
                 //ecriture dans la database nouvel user
-                
-                
-                MetroMessageBox.Show(this, "Merci de vous etre inscrit sur CryptoStake", "Inscritpion Réussie", MessageBoxButtons.OK, MessageBoxIcon.Asterisk); }
+
+
+                MetroMessageBox.Show(this, "Merci de vous etre inscrit sur CryptoStake", "Inscritpion Réussie", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
         }
 
 
