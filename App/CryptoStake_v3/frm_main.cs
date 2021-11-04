@@ -48,24 +48,31 @@ namespace CryptoStake_v3
 
         private void ChartLoader()
         {
-            //TODO examination du portfolio sur table compte et transaction(cursor? valeurs chaque coin)
+            //TODO query  sel * from transaction where compt_Id=transc_comptID 
+            //foreach(  transaction-> ChartPortfolio.Series["portfolio"].Points.AddXY("Crypt_ID", 1300);
             ChartPortfolio.Series["portfolio"].Points.AddXY("btc", 1300);
             ChartPortfolio.Series["portfolio"].Points.AddXY("Eth", 800);
             ChartPortfolio.Series["portfolio"].Points.AddXY("Xrp", 10000);
             ChartPortfolio.Series["portfolio"].Points.AddXY("Ada", 4000);
         }
 
-        private void dtg_portfolio_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void Dtg_portfolio_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             //cbo_portfolio.value= valeur de la case cliqué
         }
 
-        //charger comboBox ac les transaction du portfolio
-        private void btn_vendre_Click(object sender, EventArgs e)
+
+        private void Btn_portFvendre_Click(object sender, EventArgs e)
         {
-            //query vente de la position
-            MetroMessageBox.Show(this, "La transaction s'est deroulé correctement, votre compte a ete credite +/valeurTransaction", "Vente Effectué", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            if (cbo_portFcrypoList.Text == "") { MetroMessageBox.Show(this, "Vous n avez pas choisis la position que vous souhaitez vendre", "Choisissez une postion", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+            else
+            {
+                MetroMessageBox.Show(this, "La transaction s'est deroulé correctement, votre compte a ete credite +/valeurTransaction", "Vente Effectué", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
         }
+
+
+
 
         //Achat
 
@@ -75,79 +82,76 @@ namespace CryptoStake_v3
             //click sur la recherche
             //si vente ou achat
 
-            if (txt_AchatSearch.Text == "" || nud_achatQuant.Value == 0)
+            if (txt_achatSearch.Text == "" || nud_achatQuant.Value == 0)
             {
-                MetroMessageBox.Show(this, "Choisissez un Assets et une quantité", "Champs incomplets", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MetroMessageBox.Show(this, "Choisissez un Assets et une quantité", "Champs incomplets", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txt_achatSearch.Focus();
             }
 
-
+            else if ((chk_achatSl.Checked == true || chk_achatTP.Checked == true)& nud_achatSlTpVal.Value == 0)
+            {
+                
+                    MetroMessageBox.Show(this, "Veuillez choisir un pourcentage pour votre Stop loss/Take profit", "Champs incomplets", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    nud_achatSlTpVal.Focus();
+               
+            }
 
             //TODO: verifier si le solde est sufisant 
             //TODO : query check solde du compte
 
             //MetroMessageBox.Show(this, "Approvisionner votre Compte", "Solde insufisant", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-
-
-
-
-            if (txt_AchatSearch.Text != "" & nud_achatQuant.Value > 0)
+            else
             {
-                MetroMessageBox.Show(this, "Vous venez d'acheter de la cryptomonnaies :" + nud_achatQuant.Value + " unités de " + txt_AchatSearch.Text, "Achat Validé", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MetroMessageBox.Show(this, "Vous venez d'acheter de la cryptomonnaies :" + nud_achatQuant.Value + " unités de " + txt_achatSearch.Text, "Achat Validé", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
-
-
-            else if (chk_achatSl.Checked == true || chk_TP.Checked == true)
-            {
-                if (nud_slTpVal.Value == 0)
-                {
-                    MetroMessageBox.Show(this, "Veuillez choisir un pourcentage pour votre Stop loss/Take profit", "Champs incomplets", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                }
-            }
-
-
 
         }
 
-        private void dtg_transac_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void Dtg_transac_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             //txt_achatSearch.Text= valeur de la case cliqué
         }
 
-        private void Chk_TP_CheckedChanged(object sender, EventArgs e)
+        private void Chk_achatTP_CheckedChanged(object sender, EventArgs e)
         {
             if (chk_achatSl.Checked) { chk_achatSl.Checked = false; }
+            nud_achatSlTpVal.Value = 0;
         }
 
         private void Chk_achatSl_CheckedChanged(object sender, EventArgs e)
         {
-            if (chk_TP.Checked) { chk_TP.Checked = false; }
+            if (chk_achatTP.Checked) { chk_achatTP.Checked = false; }
+            nud_achatSlTpVal.Value = 0;
         }
 
 
         //facture
+        //(TODO implementation class abstaite->4  class concrete(transac, transcs mensuel,transacs mensuel,transacs hebdo)
 
-        private void btn_printAnnuel_Click(object sender, EventArgs e)
+        private void Btn_facturePrintAnnuel_Click(object sender, EventArgs e)
         {
-            //query recurper list de transaction, instanciation Facture -> preview
+            //query recurper list de transaction, instanciation FactureAnnuel -> preview
         }
 
-        private void bnt_printMensuel_Click(object sender, EventArgs e)
+        private void Btn_facturePrintMensuel_Click(object sender, EventArgs e)
         {
-            //query recurper list de transaction, instanciation Facture -> preview
+            //query recurper list de transaction, instanciation FactureMensuel -> preview
         }
 
-        private void btn_printHebdo_Click(object sender, EventArgs e)
+        private void Btn_facturePrintHebdo_Click(object sender, EventArgs e)
         {
-            //query recurper list de transaction, instanciation Facture -> preview
+            //query recurper list de transaction, instanciation FactureHebdomadaire -> preview
         }
 
 
-        private void dtg_facture_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void Dtg_facture_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             //txt_facture.Text= valeur de la case cliqué
         }
-        private void btn_print_Click(object sender, EventArgs e)
+        private void Btn_facturePrint_Click(object sender, EventArgs e)
         {
+
+            //TODO verifier que preview n est pas vide
             MetroMessageBox.Show(this, "Voici la facture pour /typeFacture ou transaction", "Impression de Facture", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
         }
 
@@ -157,12 +161,20 @@ namespace CryptoStake_v3
 
 
         private void ClearTransac() {
-            nud_slTpVal.Value = 0;
+            nud_achatSlTpVal.Value = 0;
             nud_achatQuant.Value = 0;
             chk_achatSl.Checked = false;
-            chk_TP.Checked = false;
+            chk_achatTP.Checked = false;
+            txt_achatSearch.Text = "";
         }
 
+        private void ClearSearches()
+        {
+            txt_achatSearch.Text = "";
+            txt_factureSearch.Text = "";
+            txt_homeSearch.Text = "";
+            txt_portFsearch.Text = "";
+        }
 
 
 
@@ -172,32 +184,45 @@ namespace CryptoStake_v3
 
         private void Btn_homeMain_Click(object sender, EventArgs e)
         {
-            tbc_Main.SelectedTab = tbp_home;
+            tbc_main.SelectedTab = tbp_home;
             ClearTransac();
+            ClearSearches(); 
+            txt_homeSearch.Focus();
+            //TODO update database
         }
 
         private void Btn_achatVente_Click(object sender, EventArgs e)
         {
-            tbc_Main.SelectedTab = tbp_shop;
+            tbc_main.SelectedTab = tbp_shop;
             ClearTransac();
+            ClearSearches();
+            txt_achatSearch.Focus();
+            //TODO update database
+
         }
 
         private void Btn_facture_Click(object sender, EventArgs e)
         {
-            tbc_Main.SelectedTab = tbp_facture;
+            tbc_main.SelectedTab = tbp_facture;
             ClearTransac();
+            ClearSearches();
+            txt_factureSearch.Focus();
+            //TODO update database
         }
 
 
         private void Btn_walletMain_Click(object sender, EventArgs e)
         {
-            tbc_Main.SelectedTab = tbp_wallet;
+            tbc_main.SelectedTab = tbp_wallet;
             ClearTransac();
+            ClearSearches();
+            txt_portFsearch.Focus();
+            //TODO update database
 
         }
 
 
-     
+
 
 
 
@@ -216,6 +241,5 @@ namespace CryptoStake_v3
             Application.Exit();
         }
 
-    
     }
 }

@@ -22,8 +22,14 @@ namespace CryptoStake_v3
         private void Frm_main_Load(object sender, EventArgs e)
         {
             //TODO: charger database
+            txt_username.Focus();
         }
+         
 
+
+
+
+        // Login  
         private void Btn_login_Click(object sender, EventArgs e)
         {
             Boolean isValid = false;
@@ -46,16 +52,24 @@ namespace CryptoStake_v3
 
         }
 
+        
+        
+        //inscription
+        
         private void Btn_inscrip_Click(object sender, EventArgs e)
         {
-            if (ContainsNumber(txt_Inscrip_nom.Text) || ContainsNumber(txt_Inscrip_Prenom.Text)) { MetroMessageBox.Show(this, "Le prenom ou le nom contient un chiffre", "Un paramètre est faux", MessageBoxButtons.OK, MessageBoxIcon.Asterisk); }
+            if (ContainsNumber(txt_Inscrip_nom.Text) || ContainsNumber(txt_Inscrip_Prenom.Text))
+            { MetroMessageBox.Show(this, "Le prenom ou le nom contient un chiffre", "Un paramètre est faux", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                if (ContainsNumber(txt_Inscrip_Prenom.Text)) { txt_Inscrip_Prenom.Focus(); }
+                if (ContainsNumber(txt_Inscrip_nom.Text)) { txt_Inscrip_nom.Focus(); }
+            }
 
             else
             {
                 //ecriture dans la database nouvel user
+                
 
-
-                MetroMessageBox.Show(this, "Merci de vous etre inscrit sur CryptoStake", "Inscritpion Réussie", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MetroMessageBox.Show(this, "Merci de vous etre inscrit sur CryptoStake, Vous pouvez maintenant vous logger pour accéder à votre compte ", "Inscritpion Réussie", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
         }
 

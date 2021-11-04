@@ -29,13 +29,13 @@ namespace CryptoStake_v3
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnl_AJustHeadr = new System.Windows.Forms.Panel();
             this.pnl_menuMain = new System.Windows.Forms.Panel();
             this.btn_logout = new FontAwesome.Sharp.IconButton();
@@ -51,12 +51,12 @@ namespace CryptoStake_v3
             this.lbl_Usr = new MetroFramework.Controls.MetroLabel();
             this.lbl_welcome = new MetroFramework.Controls.MetroLabel();
             this.pct_iconUsr = new FontAwesome.Sharp.IconPictureBox();
-            this.tbc_Main = new System.Windows.Forms.TabControl();
+            this.tbc_main = new System.Windows.Forms.TabControl();
             this.tbp_home = new System.Windows.Forms.TabPage();
             this.pnl_searchHome = new System.Windows.Forms.Panel();
             this.title_home = new MetroFramework.Controls.MetroTile();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txt_searchMain = new System.Windows.Forms.TextBox();
+            this.lbl_homeSearch = new System.Windows.Forms.Label();
+            this.txt_homeSearch = new System.Windows.Forms.TextBox();
             this.dtg_Home = new System.Windows.Forms.DataGridView();
             this.col_dtgHome_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_dtgHome_Nom = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,9 +64,9 @@ namespace CryptoStake_v3
             this.col_dtgHome_Vente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_dtgHome_Evol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tbp_wallet = new System.Windows.Forms.TabPage();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btn_vendre = new System.Windows.Forms.Button();
-            this.cbo_portfolio = new MetroFramework.Controls.MetroComboBox();
+            this.lbl_portFretourTransac = new System.Windows.Forms.Label();
+            this.btn_portFvendre = new System.Windows.Forms.Button();
+            this.cbo_portFcrypoList = new MetroFramework.Controls.MetroComboBox();
             this.pnl_chart = new System.Windows.Forms.Panel();
             this.ChartPortfolio = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.pnl_wallet = new System.Windows.Forms.Panel();
@@ -79,8 +79,8 @@ namespace CryptoStake_v3
             this.col_dtgPortfolio_slTp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnl_searchPortfolio = new System.Windows.Forms.Panel();
             this.title_portfolio = new MetroFramework.Controls.MetroTile();
-            this.lbl_searchProfolio = new System.Windows.Forms.Label();
-            this.txt_searchPortfolio = new System.Windows.Forms.TextBox();
+            this.lbl_portFsearch = new System.Windows.Forms.Label();
+            this.txt_portFsearch = new System.Windows.Forms.TextBox();
             this.tbp_shop = new System.Windows.Forms.TabPage();
             this.dtg_transac = new System.Windows.Forms.DataGridView();
             this.col_dtgTransac_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -92,14 +92,14 @@ namespace CryptoStake_v3
             this.lbl_TopScorer = new System.Windows.Forms.Label();
             this.pnl_achat_vente = new System.Windows.Forms.Panel();
             this.title_Achat = new MetroFramework.Controls.MetroTile();
-            this.pnl_transac = new System.Windows.Forms.Panel();
-            this.txt_AchatSearch = new System.Windows.Forms.TextBox();
-            this.nud_slTpVal = new System.Windows.Forms.NumericUpDown();
+            this.pnl_transacAchat = new System.Windows.Forms.Panel();
+            this.txt_achatSearch = new System.Windows.Forms.TextBox();
+            this.nud_achatSlTpVal = new System.Windows.Forms.NumericUpDown();
             this.nud_achatQuant = new System.Windows.Forms.NumericUpDown();
             this.btn_achatValider = new System.Windows.Forms.Button();
             this.gpb_slTp = new System.Windows.Forms.GroupBox();
             this.chk_achatSl = new System.Windows.Forms.CheckBox();
-            this.chk_TP = new System.Windows.Forms.CheckBox();
+            this.chk_achatTP = new System.Windows.Forms.CheckBox();
             this.lbl_achatQuant = new System.Windows.Forms.Label();
             this.lbl_achatSearch = new System.Windows.Forms.Label();
             this.tbp_facture = new System.Windows.Forms.TabPage();
@@ -107,24 +107,24 @@ namespace CryptoStake_v3
             this.prnt_prev_facture = new System.Windows.Forms.PrintPreviewControl();
             this.title_facturation = new MetroFramework.Controls.MetroTile();
             this.pnl_printAction = new System.Windows.Forms.Panel();
-            this.btn_print = new System.Windows.Forms.Button();
-            this.pnl_fond = new System.Windows.Forms.Panel();
-            this.lbl_searchPrint = new System.Windows.Forms.Label();
-            this.txt_searchFacture = new System.Windows.Forms.TextBox();
+            this.btn_facturePrint = new System.Windows.Forms.Button();
+            this.pnl_factureCommand = new System.Windows.Forms.Panel();
+            this.lbl_factureSearch = new System.Windows.Forms.Label();
+            this.txt_factureSearch = new System.Windows.Forms.TextBox();
             this.dtg_facture = new System.Windows.Forms.DataGridView();
             this.col_dtg_facture_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_dtg_facture_Crypto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_dtg_facture_value = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_dtg_facture_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btn_printHebdo = new System.Windows.Forms.Button();
-            this.bnt_printMensuel = new System.Windows.Forms.Button();
-            this.btn_printAnnuel = new System.Windows.Forms.Button();
+            this.btn_facturePrintHebdo = new System.Windows.Forms.Button();
+            this.btn_facturePrintMensuel = new System.Windows.Forms.Button();
+            this.btn_facturePrintAnnuel = new System.Windows.Forms.Button();
             this.pnl_menuMain.SuspendLayout();
             this.pnl_footer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pct_logo)).BeginInit();
             this.pnl_infoUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pct_iconUsr)).BeginInit();
-            this.tbc_Main.SuspendLayout();
+            this.tbc_main.SuspendLayout();
             this.tbp_home.SuspendLayout();
             this.pnl_searchHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_Home)).BeginInit();
@@ -138,14 +138,14 @@ namespace CryptoStake_v3
             ((System.ComponentModel.ISupportInitialize)(this.dtg_transac)).BeginInit();
             this.pnl_searchAchatVente.SuspendLayout();
             this.pnl_achat_vente.SuspendLayout();
-            this.pnl_transac.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_slTpVal)).BeginInit();
+            this.pnl_transacAchat.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_achatSlTpVal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_achatQuant)).BeginInit();
             this.gpb_slTp.SuspendLayout();
             this.tbp_facture.SuspendLayout();
             this.pnl_print.SuspendLayout();
             this.pnl_printAction.SuspendLayout();
-            this.pnl_fond.SuspendLayout();
+            this.pnl_factureCommand.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_facture)).BeginInit();
             this.SuspendLayout();
             // 
@@ -316,10 +316,10 @@ namespace CryptoStake_v3
             this.pnl_footer.Controls.Add(this.pct_logo);
             this.pnl_footer.Controls.Add(this.pnl_infoUser);
             this.pnl_footer.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnl_footer.Location = new System.Drawing.Point(84, 843);
+            this.pnl_footer.Location = new System.Drawing.Point(84, 855);
             this.pnl_footer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnl_footer.Name = "pnl_footer";
-            this.pnl_footer.Size = new System.Drawing.Size(1292, 154);
+            this.pnl_footer.Size = new System.Drawing.Size(1292, 142);
             this.pnl_footer.TabIndex = 3;
             // 
             // pct_logo
@@ -329,9 +329,9 @@ namespace CryptoStake_v3
             this.pct_logo.Location = new System.Drawing.Point(0, 0);
             this.pct_logo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pct_logo.Name = "pct_logo";
-            this.pct_logo.Size = new System.Drawing.Size(962, 154);
+            this.pct_logo.Size = new System.Drawing.Size(962, 142);
             this.pct_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pct_logo.TabIndex = 1;
+            this.pct_logo.TabIndex = 3;
             this.pct_logo.TabStop = false;
             // 
             // pnl_infoUser
@@ -343,14 +343,14 @@ namespace CryptoStake_v3
             this.pnl_infoUser.Location = new System.Drawing.Point(962, 0);
             this.pnl_infoUser.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnl_infoUser.Name = "pnl_infoUser";
-            this.pnl_infoUser.Size = new System.Drawing.Size(330, 154);
+            this.pnl_infoUser.Size = new System.Drawing.Size(330, 142);
             this.pnl_infoUser.TabIndex = 0;
             // 
             // lbl_Usr
             // 
             this.lbl_Usr.AutoSize = true;
             this.lbl_Usr.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.lbl_Usr.Location = new System.Drawing.Point(39, 88);
+            this.lbl_Usr.Location = new System.Drawing.Point(133, 111);
             this.lbl_Usr.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Usr.Name = "lbl_Usr";
             this.lbl_Usr.Size = new System.Drawing.Size(88, 15);
@@ -361,7 +361,7 @@ namespace CryptoStake_v3
             // 
             this.lbl_welcome.AutoSize = true;
             this.lbl_welcome.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.lbl_welcome.Location = new System.Drawing.Point(9, 65);
+            this.lbl_welcome.Location = new System.Drawing.Point(103, 88);
             this.lbl_welcome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_welcome.Name = "lbl_welcome";
             this.lbl_welcome.Size = new System.Drawing.Size(140, 15);
@@ -378,30 +378,30 @@ namespace CryptoStake_v3
             this.pct_iconUsr.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(85)))));
             this.pct_iconUsr.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.pct_iconUsr.IconSize = 72;
-            this.pct_iconUsr.Location = new System.Drawing.Point(39, 0);
+            this.pct_iconUsr.Location = new System.Drawing.Point(133, 23);
             this.pct_iconUsr.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pct_iconUsr.Name = "pct_iconUsr";
             this.pct_iconUsr.Size = new System.Drawing.Size(72, 74);
             this.pct_iconUsr.TabIndex = 0;
             this.pct_iconUsr.TabStop = false;
             // 
-            // tbc_Main
+            // tbc_main
             // 
-            this.tbc_Main.Alignment = System.Windows.Forms.TabAlignment.Bottom;
-            this.tbc_Main.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.tbc_main.Alignment = System.Windows.Forms.TabAlignment.Right;
+            this.tbc_main.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbc_Main.Controls.Add(this.tbp_home);
-            this.tbc_Main.Controls.Add(this.tbp_wallet);
-            this.tbc_Main.Controls.Add(this.tbp_shop);
-            this.tbc_Main.Controls.Add(this.tbp_facture);
-            this.tbc_Main.Location = new System.Drawing.Point(84, 98);
-            this.tbc_Main.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbc_Main.Multiline = true;
-            this.tbc_Main.Name = "tbc_Main";
-            this.tbc_Main.SelectedIndex = 0;
-            this.tbc_Main.Size = new System.Drawing.Size(1292, 782);
-            this.tbc_Main.TabIndex = 4;
+            this.tbc_main.Controls.Add(this.tbp_home);
+            this.tbc_main.Controls.Add(this.tbp_wallet);
+            this.tbc_main.Controls.Add(this.tbp_shop);
+            this.tbc_main.Controls.Add(this.tbp_facture);
+            this.tbc_main.Location = new System.Drawing.Point(84, 98);
+            this.tbc_main.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbc_main.Multiline = true;
+            this.tbc_main.Name = "tbc_main";
+            this.tbc_main.SelectedIndex = 0;
+            this.tbc_main.Size = new System.Drawing.Size(1292, 782);
+            this.tbc_main.TabIndex = 4;
             // 
             // tbp_home
             // 
@@ -411,7 +411,7 @@ namespace CryptoStake_v3
             this.tbp_home.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbp_home.Name = "tbp_home";
             this.tbp_home.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbp_home.Size = new System.Drawing.Size(1284, 756);
+            this.tbp_home.Size = new System.Drawing.Size(1265, 774);
             this.tbp_home.TabIndex = 0;
             this.tbp_home.UseVisualStyleBackColor = true;
             // 
@@ -419,13 +419,13 @@ namespace CryptoStake_v3
             // 
             this.pnl_searchHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(35)))), ((int)(((byte)(46)))));
             this.pnl_searchHome.Controls.Add(this.title_home);
-            this.pnl_searchHome.Controls.Add(this.label4);
-            this.pnl_searchHome.Controls.Add(this.txt_searchMain);
+            this.pnl_searchHome.Controls.Add(this.lbl_homeSearch);
+            this.pnl_searchHome.Controls.Add(this.txt_homeSearch);
             this.pnl_searchHome.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_searchHome.Location = new System.Drawing.Point(4, 5);
             this.pnl_searchHome.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnl_searchHome.Name = "pnl_searchHome";
-            this.pnl_searchHome.Size = new System.Drawing.Size(1276, 45);
+            this.pnl_searchHome.Size = new System.Drawing.Size(1257, 45);
             this.pnl_searchHome.TabIndex = 3;
             // 
             // title_home
@@ -441,26 +441,26 @@ namespace CryptoStake_v3
             this.title_home.UseCustomBackColor = true;
             this.title_home.UseSelectable = true;
             // 
-            // label4
+            // lbl_homeSearch
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(251)))), ((int)(((byte)(253)))));
-            this.label4.Location = new System.Drawing.Point(484, 18);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "rechercher";
+            this.lbl_homeSearch.AutoSize = true;
+            this.lbl_homeSearch.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_homeSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(251)))), ((int)(((byte)(253)))));
+            this.lbl_homeSearch.Location = new System.Drawing.Point(484, 18);
+            this.lbl_homeSearch.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_homeSearch.Name = "lbl_homeSearch";
+            this.lbl_homeSearch.Size = new System.Drawing.Size(61, 13);
+            this.lbl_homeSearch.TabIndex = 3;
+            this.lbl_homeSearch.Text = "rechercher";
             // 
-            // txt_searchMain
+            // txt_homeSearch
             // 
-            this.txt_searchMain.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_searchMain.Location = new System.Drawing.Point(553, 14);
-            this.txt_searchMain.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txt_searchMain.Name = "txt_searchMain";
-            this.txt_searchMain.Size = new System.Drawing.Size(668, 21);
-            this.txt_searchMain.TabIndex = 0;
+            this.txt_homeSearch.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_homeSearch.Location = new System.Drawing.Point(553, 14);
+            this.txt_homeSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_homeSearch.Name = "txt_homeSearch";
+            this.txt_homeSearch.Size = new System.Drawing.Size(668, 21);
+            this.txt_homeSearch.TabIndex = 0;
             // 
             // dtg_Home
             // 
@@ -474,14 +474,14 @@ namespace CryptoStake_v3
             this.dtg_Home.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtg_Home.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dtg_Home.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(54)))), ((int)(((byte)(70)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(251)))), ((int)(((byte)(253)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtg_Home.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(54)))), ((int)(((byte)(70)))));
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(251)))), ((int)(((byte)(253)))));
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtg_Home.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.dtg_Home.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtg_Home.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.col_dtgHome_id,
@@ -496,7 +496,7 @@ namespace CryptoStake_v3
             this.dtg_Home.ReadOnly = true;
             this.dtg_Home.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dtg_Home.RowHeadersVisible = false;
-            this.dtg_Home.Size = new System.Drawing.Size(1276, 695);
+            this.dtg_Home.Size = new System.Drawing.Size(1257, 713);
             this.dtg_Home.TabIndex = 1;
             this.dtg_Home.TabStop = false;
             // 
@@ -533,9 +533,9 @@ namespace CryptoStake_v3
             // tbp_wallet
             // 
             this.tbp_wallet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(35)))), ((int)(((byte)(50)))));
-            this.tbp_wallet.Controls.Add(this.label1);
-            this.tbp_wallet.Controls.Add(this.btn_vendre);
-            this.tbp_wallet.Controls.Add(this.cbo_portfolio);
+            this.tbp_wallet.Controls.Add(this.lbl_portFretourTransac);
+            this.tbp_wallet.Controls.Add(this.btn_portFvendre);
+            this.tbp_wallet.Controls.Add(this.cbo_portFcrypoList);
             this.tbp_wallet.Controls.Add(this.pnl_chart);
             this.tbp_wallet.Controls.Add(this.pnl_wallet);
             this.tbp_wallet.Cursor = System.Windows.Forms.Cursors.Cross;
@@ -543,88 +543,92 @@ namespace CryptoStake_v3
             this.tbp_wallet.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbp_wallet.Name = "tbp_wallet";
             this.tbp_wallet.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbp_wallet.Size = new System.Drawing.Size(1284, 756);
+            this.tbp_wallet.Size = new System.Drawing.Size(1265, 774);
             this.tbp_wallet.TabIndex = 1;
             // 
-            // label1
+            // lbl_portFretourTransac
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(251)))), ((int)(((byte)(253)))));
-            this.label1.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(54)))), ((int)(((byte)(70)))));
-            this.label1.Location = new System.Drawing.Point(431, 717);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(363, 28);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Votre portfolio a une Valleur Actuelle de XXXX frs                              \r" +
+            this.lbl_portFretourTransac.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_portFretourTransac.AutoSize = true;
+            this.lbl_portFretourTransac.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(251)))), ((int)(((byte)(253)))));
+            this.lbl_portFretourTransac.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_portFretourTransac.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(54)))), ((int)(((byte)(70)))));
+            this.lbl_portFretourTransac.Location = new System.Drawing.Point(412, 735);
+            this.lbl_portFretourTransac.Name = "lbl_portFretourTransac";
+            this.lbl_portFretourTransac.Size = new System.Drawing.Size(363, 28);
+            this.lbl_portFretourTransac.TabIndex = 4;
+            this.lbl_portFretourTransac.Text = "Votre portfolio a une Valleur Actuelle de XXXX frs                              \r" +
     "\nVous disposez actuellement de XXXX frs sur votre compte    ";
+            this.lbl_portFretourTransac.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btn_vendre
+            // btn_portFvendre
             // 
-            this.btn_vendre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.btn_portFvendre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_vendre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(169)))), ((int)(((byte)(219)))));
-            this.btn_vendre.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_vendre.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
-            this.btn_vendre.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(123)))), ((int)(((byte)(198)))));
-            this.btn_vendre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_vendre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
-            this.btn_vendre.Location = new System.Drawing.Point(308, 717);
-            this.btn_vendre.Name = "btn_vendre";
-            this.btn_vendre.Size = new System.Drawing.Size(117, 28);
-            this.btn_vendre.TabIndex = 3;
-            this.btn_vendre.Text = "Vendre";
-            this.btn_vendre.UseVisualStyleBackColor = false;
-            this.btn_vendre.Click += new System.EventHandler(this.btn_vendre_Click);
+            this.btn_portFvendre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(169)))), ((int)(((byte)(219)))));
+            this.btn_portFvendre.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_portFvendre.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
+            this.btn_portFvendre.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(123)))), ((int)(((byte)(198)))));
+            this.btn_portFvendre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_portFvendre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
+            this.btn_portFvendre.Location = new System.Drawing.Point(308, 735);
+            this.btn_portFvendre.Name = "btn_portFvendre";
+            this.btn_portFvendre.Size = new System.Drawing.Size(98, 28);
+            this.btn_portFvendre.TabIndex = 3;
+            this.btn_portFvendre.Text = "&Vendre";
+            this.btn_portFvendre.UseVisualStyleBackColor = false;
+            this.btn_portFvendre.Click += new System.EventHandler(this.Btn_portFvendre_Click);
             // 
-            // cbo_portfolio
+            // cbo_portFcrypoList
             // 
-            this.cbo_portfolio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.cbo_portfolio.Cursor = System.Windows.Forms.Cursors.Default;
-            this.cbo_portfolio.FormattingEnabled = true;
-            this.cbo_portfolio.ItemHeight = 23;
-            this.cbo_portfolio.Location = new System.Drawing.Point(7, 717);
-            this.cbo_portfolio.Name = "cbo_portfolio";
-            this.cbo_portfolio.Size = new System.Drawing.Size(295, 29);
-            this.cbo_portfolio.TabIndex = 2;
-            this.cbo_portfolio.UseSelectable = true;
+            this.cbo_portFcrypoList.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.cbo_portFcrypoList.Cursor = System.Windows.Forms.Cursors.Default;
+            this.cbo_portFcrypoList.FormattingEnabled = true;
+            this.cbo_portFcrypoList.ItemHeight = 23;
+            this.cbo_portFcrypoList.Items.AddRange(new object[] {
+            "",
+            "bitcoin"});
+            this.cbo_portFcrypoList.Location = new System.Drawing.Point(7, 735);
+            this.cbo_portFcrypoList.Name = "cbo_portFcrypoList";
+            this.cbo_portFcrypoList.Size = new System.Drawing.Size(295, 29);
+            this.cbo_portFcrypoList.TabIndex = 2;
+            this.cbo_portFcrypoList.UseSelectable = true;
             // 
             // pnl_chart
             // 
             this.pnl_chart.Controls.Add(this.ChartPortfolio);
             this.pnl_chart.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnl_chart.Location = new System.Drawing.Point(827, 5);
+            this.pnl_chart.Location = new System.Drawing.Point(808, 5);
             this.pnl_chart.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnl_chart.Name = "pnl_chart";
-            this.pnl_chart.Size = new System.Drawing.Size(453, 746);
+            this.pnl_chart.Size = new System.Drawing.Size(453, 764);
             this.pnl_chart.TabIndex = 1;
             // 
             // ChartPortfolio
             // 
-            chartArea2.Name = "ChartArea1";
-            this.ChartPortfolio.ChartAreas.Add(chartArea2);
+            chartArea4.Name = "ChartArea1";
+            this.ChartPortfolio.ChartAreas.Add(chartArea4);
             this.ChartPortfolio.Cursor = System.Windows.Forms.Cursors.Default;
             this.ChartPortfolio.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend2.Name = "Legend1";
-            this.ChartPortfolio.Legends.Add(legend2);
+            legend4.Name = "Legend1";
+            this.ChartPortfolio.Legends.Add(legend4);
             this.ChartPortfolio.Location = new System.Drawing.Point(0, 0);
             this.ChartPortfolio.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ChartPortfolio.Name = "ChartPortfolio";
             this.ChartPortfolio.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Light;
-            series2.BackImageAlignment = System.Windows.Forms.DataVisualization.Charting.ChartImageAlignmentStyle.Center;
-            series2.BackSecondaryColor = System.Drawing.Color.White;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series2.Font = new System.Drawing.Font("Roboto Medium", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series2.IsValueShownAsLabel = true;
-            series2.LabelForeColor = System.Drawing.Color.White;
-            series2.Legend = "Legend1";
-            series2.Name = "portfolio";
-            series2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Berry;
-            series2.SmartLabelStyle.CalloutLineColor = System.Drawing.Color.White;
-            this.ChartPortfolio.Series.Add(series2);
-            this.ChartPortfolio.Size = new System.Drawing.Size(453, 746);
+            series4.BackImageAlignment = System.Windows.Forms.DataVisualization.Charting.ChartImageAlignmentStyle.Center;
+            series4.BackSecondaryColor = System.Drawing.Color.White;
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series4.Font = new System.Drawing.Font("Roboto Medium", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series4.IsValueShownAsLabel = true;
+            series4.LabelForeColor = System.Drawing.Color.White;
+            series4.Legend = "Legend1";
+            series4.Name = "portfolio";
+            series4.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Berry;
+            series4.SmartLabelStyle.CalloutLineColor = System.Drawing.Color.White;
+            this.ChartPortfolio.Series.Add(series4);
+            this.ChartPortfolio.Size = new System.Drawing.Size(453, 764);
             this.ChartPortfolio.TabIndex = 1;
             this.ChartPortfolio.Text = "chart1";
             // 
@@ -638,7 +642,7 @@ namespace CryptoStake_v3
             this.pnl_wallet.Location = new System.Drawing.Point(0, 0);
             this.pnl_wallet.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnl_wallet.Name = "pnl_wallet";
-            this.pnl_wallet.Size = new System.Drawing.Size(794, 709);
+            this.pnl_wallet.Size = new System.Drawing.Size(775, 727);
             this.pnl_wallet.TabIndex = 0;
             // 
             // dtg_portfolio
@@ -647,14 +651,14 @@ namespace CryptoStake_v3
             this.dtg_portfolio.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtg_portfolio.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dtg_portfolio.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(54)))), ((int)(((byte)(70)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(251)))), ((int)(((byte)(253)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtg_portfolio.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(54)))), ((int)(((byte)(70)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(251)))), ((int)(((byte)(253)))));
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtg_portfolio.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dtg_portfolio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtg_portfolio.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.col_dtgPortfolio_id,
@@ -671,10 +675,11 @@ namespace CryptoStake_v3
             this.dtg_portfolio.Name = "dtg_portfolio";
             this.dtg_portfolio.ReadOnly = true;
             this.dtg_portfolio.RowHeadersVisible = false;
-            this.dtg_portfolio.Size = new System.Drawing.Size(794, 664);
+            this.dtg_portfolio.Size = new System.Drawing.Size(775, 682);
             this.dtg_portfolio.StandardTab = true;
             this.dtg_portfolio.TabIndex = 4;
-            this.dtg_portfolio.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_portfolio_CellContentClick);
+            this.dtg_portfolio.TabStop = false;
+            this.dtg_portfolio.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dtg_portfolio_CellContentClick);
             // 
             // col_dtgPortfolio_id
             // 
@@ -716,13 +721,13 @@ namespace CryptoStake_v3
             // 
             this.pnl_searchPortfolio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(35)))), ((int)(((byte)(46)))));
             this.pnl_searchPortfolio.Controls.Add(this.title_portfolio);
-            this.pnl_searchPortfolio.Controls.Add(this.lbl_searchProfolio);
-            this.pnl_searchPortfolio.Controls.Add(this.txt_searchPortfolio);
+            this.pnl_searchPortfolio.Controls.Add(this.lbl_portFsearch);
+            this.pnl_searchPortfolio.Controls.Add(this.txt_portFsearch);
             this.pnl_searchPortfolio.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_searchPortfolio.Location = new System.Drawing.Point(0, 0);
             this.pnl_searchPortfolio.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnl_searchPortfolio.Name = "pnl_searchPortfolio";
-            this.pnl_searchPortfolio.Size = new System.Drawing.Size(794, 45);
+            this.pnl_searchPortfolio.Size = new System.Drawing.Size(775, 45);
             this.pnl_searchPortfolio.TabIndex = 3;
             // 
             // title_portfolio
@@ -739,27 +744,27 @@ namespace CryptoStake_v3
             this.title_portfolio.UseCustomBackColor = true;
             this.title_portfolio.UseSelectable = true;
             // 
-            // lbl_searchProfolio
+            // lbl_portFsearch
             // 
-            this.lbl_searchProfolio.AutoSize = true;
-            this.lbl_searchProfolio.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_searchProfolio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(251)))), ((int)(((byte)(253)))));
-            this.lbl_searchProfolio.Location = new System.Drawing.Point(391, 12);
-            this.lbl_searchProfolio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_searchProfolio.Name = "lbl_searchProfolio";
-            this.lbl_searchProfolio.Size = new System.Drawing.Size(61, 13);
-            this.lbl_searchProfolio.TabIndex = 3;
-            this.lbl_searchProfolio.Text = "rechercher";
+            this.lbl_portFsearch.AutoSize = true;
+            this.lbl_portFsearch.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_portFsearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(251)))), ((int)(((byte)(253)))));
+            this.lbl_portFsearch.Location = new System.Drawing.Point(391, 12);
+            this.lbl_portFsearch.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_portFsearch.Name = "lbl_portFsearch";
+            this.lbl_portFsearch.Size = new System.Drawing.Size(61, 13);
+            this.lbl_portFsearch.TabIndex = 0;
+            this.lbl_portFsearch.Text = "&rechercher";
             // 
-            // txt_searchPortfolio
+            // txt_portFsearch
             // 
-            this.txt_searchPortfolio.Cursor = System.Windows.Forms.Cursors.Default;
-            this.txt_searchPortfolio.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_searchPortfolio.Location = new System.Drawing.Point(460, 10);
-            this.txt_searchPortfolio.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txt_searchPortfolio.Name = "txt_searchPortfolio";
-            this.txt_searchPortfolio.Size = new System.Drawing.Size(265, 21);
-            this.txt_searchPortfolio.TabIndex = 0;
+            this.txt_portFsearch.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txt_portFsearch.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_portFsearch.Location = new System.Drawing.Point(460, 10);
+            this.txt_portFsearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_portFsearch.Name = "txt_portFsearch";
+            this.txt_portFsearch.Size = new System.Drawing.Size(265, 21);
+            this.txt_portFsearch.TabIndex = 1;
             // 
             // tbp_shop
             // 
@@ -769,7 +774,7 @@ namespace CryptoStake_v3
             this.tbp_shop.Location = new System.Drawing.Point(4, 4);
             this.tbp_shop.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbp_shop.Name = "tbp_shop";
-            this.tbp_shop.Size = new System.Drawing.Size(1284, 756);
+            this.tbp_shop.Size = new System.Drawing.Size(1265, 774);
             this.tbp_shop.TabIndex = 2;
             this.tbp_shop.UseVisualStyleBackColor = true;
             // 
@@ -782,14 +787,14 @@ namespace CryptoStake_v3
             this.dtg_transac.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtg_transac.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dtg_transac.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(54)))), ((int)(((byte)(70)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(251)))), ((int)(((byte)(253)))));
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtg_transac.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(54)))), ((int)(((byte)(70)))));
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(251)))), ((int)(((byte)(253)))));
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtg_transac.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.dtg_transac.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtg_transac.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.col_dtgTransac_id,
@@ -804,9 +809,10 @@ namespace CryptoStake_v3
             this.dtg_transac.ReadOnly = true;
             this.dtg_transac.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dtg_transac.RowHeadersVisible = false;
-            this.dtg_transac.Size = new System.Drawing.Size(922, 712);
+            this.dtg_transac.Size = new System.Drawing.Size(903, 730);
             this.dtg_transac.TabIndex = 5;
-            this.dtg_transac.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_transac_CellContentClick);
+            this.dtg_transac.TabStop = false;
+            this.dtg_transac.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dtg_transac_CellContentClick);
             // 
             // col_dtgTransac_id
             // 
@@ -846,7 +852,7 @@ namespace CryptoStake_v3
             this.pnl_searchAchatVente.Location = new System.Drawing.Point(362, 0);
             this.pnl_searchAchatVente.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnl_searchAchatVente.Name = "pnl_searchAchatVente";
-            this.pnl_searchAchatVente.Size = new System.Drawing.Size(922, 45);
+            this.pnl_searchAchatVente.Size = new System.Drawing.Size(903, 45);
             this.pnl_searchAchatVente.TabIndex = 2;
             // 
             // lbl_TopScorer
@@ -865,12 +871,12 @@ namespace CryptoStake_v3
             // 
             this.pnl_achat_vente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(35)))), ((int)(((byte)(46)))));
             this.pnl_achat_vente.Controls.Add(this.title_Achat);
-            this.pnl_achat_vente.Controls.Add(this.pnl_transac);
+            this.pnl_achat_vente.Controls.Add(this.pnl_transacAchat);
             this.pnl_achat_vente.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnl_achat_vente.Location = new System.Drawing.Point(0, 0);
             this.pnl_achat_vente.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnl_achat_vente.Name = "pnl_achat_vente";
-            this.pnl_achat_vente.Size = new System.Drawing.Size(362, 756);
+            this.pnl_achat_vente.Size = new System.Drawing.Size(362, 774);
             this.pnl_achat_vente.TabIndex = 0;
             // 
             // title_Achat
@@ -886,47 +892,47 @@ namespace CryptoStake_v3
             this.title_Achat.UseCustomBackColor = true;
             this.title_Achat.UseSelectable = true;
             // 
-            // pnl_transac
+            // pnl_transacAchat
             // 
-            this.pnl_transac.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(54)))), ((int)(((byte)(70)))));
-            this.pnl_transac.Controls.Add(this.txt_AchatSearch);
-            this.pnl_transac.Controls.Add(this.nud_slTpVal);
-            this.pnl_transac.Controls.Add(this.nud_achatQuant);
-            this.pnl_transac.Controls.Add(this.btn_achatValider);
-            this.pnl_transac.Controls.Add(this.gpb_slTp);
-            this.pnl_transac.Controls.Add(this.lbl_achatQuant);
-            this.pnl_transac.Controls.Add(this.lbl_achatSearch);
-            this.pnl_transac.Location = new System.Drawing.Point(32, 163);
-            this.pnl_transac.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pnl_transac.Name = "pnl_transac";
-            this.pnl_transac.Size = new System.Drawing.Size(300, 221);
-            this.pnl_transac.TabIndex = 0;
+            this.pnl_transacAchat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(54)))), ((int)(((byte)(70)))));
+            this.pnl_transacAchat.Controls.Add(this.txt_achatSearch);
+            this.pnl_transacAchat.Controls.Add(this.nud_achatSlTpVal);
+            this.pnl_transacAchat.Controls.Add(this.nud_achatQuant);
+            this.pnl_transacAchat.Controls.Add(this.btn_achatValider);
+            this.pnl_transacAchat.Controls.Add(this.gpb_slTp);
+            this.pnl_transacAchat.Controls.Add(this.lbl_achatQuant);
+            this.pnl_transacAchat.Controls.Add(this.lbl_achatSearch);
+            this.pnl_transacAchat.Location = new System.Drawing.Point(32, 163);
+            this.pnl_transacAchat.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pnl_transacAchat.Name = "pnl_transacAchat";
+            this.pnl_transacAchat.Size = new System.Drawing.Size(300, 221);
+            this.pnl_transacAchat.TabIndex = 0;
             // 
-            // txt_AchatSearch
+            // txt_achatSearch
             // 
-            this.txt_AchatSearch.Location = new System.Drawing.Point(0, 44);
-            this.txt_AchatSearch.Name = "txt_AchatSearch";
-            this.txt_AchatSearch.Size = new System.Drawing.Size(300, 20);
-            this.txt_AchatSearch.TabIndex = 8;
+            this.txt_achatSearch.Location = new System.Drawing.Point(0, 44);
+            this.txt_achatSearch.Name = "txt_achatSearch";
+            this.txt_achatSearch.Size = new System.Drawing.Size(300, 20);
+            this.txt_achatSearch.TabIndex = 0;
             // 
-            // nud_slTpVal
+            // nud_achatSlTpVal
             // 
-            this.nud_slTpVal.Location = new System.Drawing.Point(0, 163);
-            this.nud_slTpVal.Maximum = new decimal(new int[] {
+            this.nud_achatSlTpVal.Location = new System.Drawing.Point(0, 163);
+            this.nud_achatSlTpVal.Maximum = new decimal(new int[] {
             30,
             0,
             0,
             0});
-            this.nud_slTpVal.Name = "nud_slTpVal";
-            this.nud_slTpVal.Size = new System.Drawing.Size(297, 20);
-            this.nud_slTpVal.TabIndex = 7;
+            this.nud_achatSlTpVal.Name = "nud_achatSlTpVal";
+            this.nud_achatSlTpVal.Size = new System.Drawing.Size(297, 20);
+            this.nud_achatSlTpVal.TabIndex = 4;
             // 
             // nud_achatQuant
             // 
             this.nud_achatQuant.Location = new System.Drawing.Point(0, 92);
             this.nud_achatQuant.Name = "nud_achatQuant";
             this.nud_achatQuant.Size = new System.Drawing.Size(297, 20);
-            this.nud_achatQuant.TabIndex = 7;
+            this.nud_achatQuant.TabIndex = 1;
             // 
             // btn_achatValider
             // 
@@ -940,21 +946,21 @@ namespace CryptoStake_v3
             this.btn_achatValider.Location = new System.Drawing.Point(0, 189);
             this.btn_achatValider.Name = "btn_achatValider";
             this.btn_achatValider.Size = new System.Drawing.Size(300, 32);
-            this.btn_achatValider.TabIndex = 6;
-            this.btn_achatValider.Text = "Vendre";
+            this.btn_achatValider.TabIndex = 5;
+            this.btn_achatValider.Text = "&Vendre";
             this.btn_achatValider.UseVisualStyleBackColor = false;
             this.btn_achatValider.Click += new System.EventHandler(this.Btn_achatValider_Click);
             // 
             // gpb_slTp
             // 
             this.gpb_slTp.Controls.Add(this.chk_achatSl);
-            this.gpb_slTp.Controls.Add(this.chk_TP);
+            this.gpb_slTp.Controls.Add(this.chk_achatTP);
             this.gpb_slTp.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gpb_slTp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(251)))), ((int)(((byte)(253)))));
             this.gpb_slTp.Location = new System.Drawing.Point(3, 118);
             this.gpb_slTp.Name = "gpb_slTp";
             this.gpb_slTp.Size = new System.Drawing.Size(294, 39);
-            this.gpb_slTp.TabIndex = 5;
+            this.gpb_slTp.TabIndex = 2;
             this.gpb_slTp.TabStop = false;
             this.gpb_slTp.Text = "SL/TP";
             // 
@@ -964,21 +970,21 @@ namespace CryptoStake_v3
             this.chk_achatSl.Location = new System.Drawing.Point(130, 15);
             this.chk_achatSl.Name = "chk_achatSl";
             this.chk_achatSl.Size = new System.Drawing.Size(73, 17);
-            this.chk_achatSl.TabIndex = 1;
+            this.chk_achatSl.TabIndex = 3;
             this.chk_achatSl.Text = "Stop loss";
             this.chk_achatSl.UseVisualStyleBackColor = true;
             this.chk_achatSl.CheckedChanged += new System.EventHandler(this.Chk_achatSl_CheckedChanged);
             // 
-            // chk_TP
+            // chk_achatTP
             // 
-            this.chk_TP.AutoSize = true;
-            this.chk_TP.Location = new System.Drawing.Point(6, 15);
-            this.chk_TP.Name = "chk_TP";
-            this.chk_TP.Size = new System.Drawing.Size(79, 17);
-            this.chk_TP.TabIndex = 0;
-            this.chk_TP.Text = "Take profit";
-            this.chk_TP.UseVisualStyleBackColor = true;
-            this.chk_TP.CheckedChanged += new System.EventHandler(this.Chk_TP_CheckedChanged);
+            this.chk_achatTP.AutoSize = true;
+            this.chk_achatTP.Location = new System.Drawing.Point(6, 15);
+            this.chk_achatTP.Name = "chk_achatTP";
+            this.chk_achatTP.Size = new System.Drawing.Size(79, 17);
+            this.chk_achatTP.TabIndex = 2;
+            this.chk_achatTP.Text = "Take profit";
+            this.chk_achatTP.UseVisualStyleBackColor = true;
+            this.chk_achatTP.CheckedChanged += new System.EventHandler(this.Chk_achatTP_CheckedChanged);
             // 
             // lbl_achatQuant
             // 
@@ -989,8 +995,8 @@ namespace CryptoStake_v3
             this.lbl_achatQuant.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_achatQuant.Name = "lbl_achatQuant";
             this.lbl_achatQuant.Size = new System.Drawing.Size(50, 13);
-            this.lbl_achatQuant.TabIndex = 4;
-            this.lbl_achatQuant.Text = "Quantité";
+            this.lbl_achatQuant.TabIndex = 1;
+            this.lbl_achatQuant.Text = "&Quantité";
             // 
             // lbl_achatSearch
             // 
@@ -1001,8 +1007,8 @@ namespace CryptoStake_v3
             this.lbl_achatSearch.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_achatSearch.Name = "lbl_achatSearch";
             this.lbl_achatSearch.Size = new System.Drawing.Size(64, 13);
-            this.lbl_achatSearch.TabIndex = 4;
-            this.lbl_achatSearch.Text = "Rechercher";
+            this.lbl_achatSearch.TabIndex = 0;
+            this.lbl_achatSearch.Text = "&Rechercher";
             // 
             // tbp_facture
             // 
@@ -1010,7 +1016,7 @@ namespace CryptoStake_v3
             this.tbp_facture.Location = new System.Drawing.Point(4, 4);
             this.tbp_facture.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbp_facture.Name = "tbp_facture";
-            this.tbp_facture.Size = new System.Drawing.Size(1284, 756);
+            this.tbp_facture.Size = new System.Drawing.Size(1265, 774);
             this.tbp_facture.TabIndex = 3;
             this.tbp_facture.UseVisualStyleBackColor = true;
             // 
@@ -1027,7 +1033,7 @@ namespace CryptoStake_v3
             this.pnl_print.Location = new System.Drawing.Point(0, 0);
             this.pnl_print.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnl_print.Name = "pnl_print";
-            this.pnl_print.Size = new System.Drawing.Size(1284, 756);
+            this.pnl_print.Size = new System.Drawing.Size(1265, 774);
             this.pnl_print.TabIndex = 0;
             this.pnl_print.Theme = MetroFramework.MetroThemeStyle.Light;
             this.pnl_print.UseCustomBackColor = true;
@@ -1040,7 +1046,7 @@ namespace CryptoStake_v3
             this.prnt_prev_facture.Dock = System.Windows.Forms.DockStyle.Fill;
             this.prnt_prev_facture.Location = new System.Drawing.Point(381, 45);
             this.prnt_prev_facture.Name = "prnt_prev_facture";
-            this.prnt_prev_facture.Size = new System.Drawing.Size(903, 711);
+            this.prnt_prev_facture.Size = new System.Drawing.Size(884, 729);
             this.prnt_prev_facture.TabIndex = 4;
             // 
             // title_facturation
@@ -1050,7 +1056,7 @@ namespace CryptoStake_v3
             this.title_facturation.Dock = System.Windows.Forms.DockStyle.Top;
             this.title_facturation.Location = new System.Drawing.Point(381, 0);
             this.title_facturation.Name = "title_facturation";
-            this.title_facturation.Size = new System.Drawing.Size(903, 45);
+            this.title_facturation.Size = new System.Drawing.Size(884, 45);
             this.title_facturation.TabIndex = 12;
             this.title_facturation.TabStop = false;
             this.title_facturation.Text = "Facturation et Impression";
@@ -1061,82 +1067,82 @@ namespace CryptoStake_v3
             // pnl_printAction
             // 
             this.pnl_printAction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(35)))), ((int)(((byte)(46)))));
-            this.pnl_printAction.Controls.Add(this.btn_print);
-            this.pnl_printAction.Controls.Add(this.pnl_fond);
-            this.pnl_printAction.Controls.Add(this.btn_printHebdo);
-            this.pnl_printAction.Controls.Add(this.bnt_printMensuel);
-            this.pnl_printAction.Controls.Add(this.btn_printAnnuel);
+            this.pnl_printAction.Controls.Add(this.btn_facturePrint);
+            this.pnl_printAction.Controls.Add(this.pnl_factureCommand);
+            this.pnl_printAction.Controls.Add(this.btn_facturePrintHebdo);
+            this.pnl_printAction.Controls.Add(this.btn_facturePrintMensuel);
+            this.pnl_printAction.Controls.Add(this.btn_facturePrintAnnuel);
             this.pnl_printAction.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnl_printAction.Location = new System.Drawing.Point(0, 0);
             this.pnl_printAction.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnl_printAction.Name = "pnl_printAction";
-            this.pnl_printAction.Size = new System.Drawing.Size(381, 756);
+            this.pnl_printAction.Size = new System.Drawing.Size(381, 774);
             this.pnl_printAction.TabIndex = 2;
             // 
-            // btn_print
+            // btn_facturePrint
             // 
-            this.btn_print.AutoEllipsis = true;
-            this.btn_print.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(54)))), ((int)(((byte)(70)))));
-            this.btn_print.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btn_print.FlatAppearance.BorderSize = 0;
-            this.btn_print.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(120)))), ((int)(((byte)(197)))));
-            this.btn_print.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_print.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_print.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(251)))), ((int)(((byte)(253)))));
-            this.btn_print.Location = new System.Drawing.Point(0, 691);
-            this.btn_print.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btn_print.Name = "btn_print";
-            this.btn_print.Size = new System.Drawing.Size(381, 65);
-            this.btn_print.TabIndex = 4;
-            this.btn_print.Text = "Print";
-            this.btn_print.UseVisualStyleBackColor = false;
-            this.btn_print.Click += new System.EventHandler(this.btn_print_Click);
+            this.btn_facturePrint.AutoEllipsis = true;
+            this.btn_facturePrint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(54)))), ((int)(((byte)(70)))));
+            this.btn_facturePrint.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btn_facturePrint.FlatAppearance.BorderSize = 0;
+            this.btn_facturePrint.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(120)))), ((int)(((byte)(197)))));
+            this.btn_facturePrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_facturePrint.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_facturePrint.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(251)))), ((int)(((byte)(253)))));
+            this.btn_facturePrint.Location = new System.Drawing.Point(0, 709);
+            this.btn_facturePrint.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_facturePrint.Name = "btn_facturePrint";
+            this.btn_facturePrint.Size = new System.Drawing.Size(381, 65);
+            this.btn_facturePrint.TabIndex = 4;
+            this.btn_facturePrint.Text = "Print";
+            this.btn_facturePrint.UseVisualStyleBackColor = false;
+            this.btn_facturePrint.Click += new System.EventHandler(this.Btn_facturePrint_Click);
             // 
-            // pnl_fond
+            // pnl_factureCommand
             // 
-            this.pnl_fond.Controls.Add(this.lbl_searchPrint);
-            this.pnl_fond.Controls.Add(this.txt_searchFacture);
-            this.pnl_fond.Controls.Add(this.dtg_facture);
-            this.pnl_fond.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_fond.Location = new System.Drawing.Point(0, 255);
-            this.pnl_fond.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pnl_fond.Name = "pnl_fond";
-            this.pnl_fond.Size = new System.Drawing.Size(381, 501);
-            this.pnl_fond.TabIndex = 3;
+            this.pnl_factureCommand.Controls.Add(this.lbl_factureSearch);
+            this.pnl_factureCommand.Controls.Add(this.txt_factureSearch);
+            this.pnl_factureCommand.Controls.Add(this.dtg_facture);
+            this.pnl_factureCommand.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnl_factureCommand.Location = new System.Drawing.Point(0, 255);
+            this.pnl_factureCommand.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pnl_factureCommand.Name = "pnl_factureCommand";
+            this.pnl_factureCommand.Size = new System.Drawing.Size(381, 519);
+            this.pnl_factureCommand.TabIndex = 3;
             // 
-            // lbl_searchPrint
+            // lbl_factureSearch
             // 
-            this.lbl_searchPrint.AutoSize = true;
-            this.lbl_searchPrint.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_searchPrint.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(251)))), ((int)(((byte)(253)))));
-            this.lbl_searchPrint.Location = new System.Drawing.Point(30, 231);
-            this.lbl_searchPrint.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_searchPrint.Name = "lbl_searchPrint";
-            this.lbl_searchPrint.Size = new System.Drawing.Size(61, 13);
-            this.lbl_searchPrint.TabIndex = 2;
-            this.lbl_searchPrint.Text = "rechercher";
+            this.lbl_factureSearch.AutoSize = true;
+            this.lbl_factureSearch.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_factureSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(251)))), ((int)(((byte)(253)))));
+            this.lbl_factureSearch.Location = new System.Drawing.Point(30, 231);
+            this.lbl_factureSearch.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_factureSearch.Name = "lbl_factureSearch";
+            this.lbl_factureSearch.Size = new System.Drawing.Size(61, 13);
+            this.lbl_factureSearch.TabIndex = 0;
+            this.lbl_factureSearch.Text = "rechercher";
             // 
-            // txt_searchFacture
+            // txt_factureSearch
             // 
-            this.txt_searchFacture.Location = new System.Drawing.Point(130, 225);
-            this.txt_searchFacture.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txt_searchFacture.Name = "txt_searchFacture";
-            this.txt_searchFacture.Size = new System.Drawing.Size(240, 20);
-            this.txt_searchFacture.TabIndex = 3;
+            this.txt_factureSearch.Location = new System.Drawing.Point(130, 225);
+            this.txt_factureSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_factureSearch.Name = "txt_factureSearch";
+            this.txt_factureSearch.Size = new System.Drawing.Size(240, 20);
+            this.txt_factureSearch.TabIndex = 0;
             // 
             // dtg_facture
             // 
             this.dtg_facture.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtg_facture.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dtg_facture.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(35)))), ((int)(((byte)(46)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(251)))), ((int)(((byte)(253)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtg_facture.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(35)))), ((int)(((byte)(46)))));
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(251)))), ((int)(((byte)(253)))));
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtg_facture.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
             this.dtg_facture.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtg_facture.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.col_dtg_facture_id,
@@ -1153,7 +1159,8 @@ namespace CryptoStake_v3
             this.dtg_facture.Size = new System.Drawing.Size(381, 215);
             this.dtg_facture.StandardTab = true;
             this.dtg_facture.TabIndex = 5;
-            this.dtg_facture.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_facture_CellContentClick);
+            this.dtg_facture.TabStop = false;
+            this.dtg_facture.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dtg_facture_CellContentClick);
             // 
             // col_dtg_facture_id
             // 
@@ -1179,72 +1186,72 @@ namespace CryptoStake_v3
             this.col_dtg_facture_date.Name = "col_dtg_facture_date";
             this.col_dtg_facture_date.ReadOnly = true;
             // 
-            // btn_printHebdo
+            // btn_facturePrintHebdo
             // 
-            this.btn_printHebdo.AutoEllipsis = true;
-            this.btn_printHebdo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(54)))), ((int)(((byte)(70)))));
-            this.btn_printHebdo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_printHebdo.FlatAppearance.BorderSize = 0;
-            this.btn_printHebdo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(120)))), ((int)(((byte)(197)))));
-            this.btn_printHebdo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_printHebdo.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_printHebdo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(251)))), ((int)(((byte)(253)))));
-            this.btn_printHebdo.Location = new System.Drawing.Point(0, 170);
-            this.btn_printHebdo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btn_printHebdo.Name = "btn_printHebdo";
-            this.btn_printHebdo.Size = new System.Drawing.Size(381, 85);
-            this.btn_printHebdo.TabIndex = 2;
-            this.btn_printHebdo.Text = "Facture hebdomadaire";
-            this.btn_printHebdo.UseVisualStyleBackColor = false;
-            this.btn_printHebdo.Click += new System.EventHandler(this.btn_printHebdo_Click);
+            this.btn_facturePrintHebdo.AutoEllipsis = true;
+            this.btn_facturePrintHebdo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(54)))), ((int)(((byte)(70)))));
+            this.btn_facturePrintHebdo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_facturePrintHebdo.FlatAppearance.BorderSize = 0;
+            this.btn_facturePrintHebdo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(120)))), ((int)(((byte)(197)))));
+            this.btn_facturePrintHebdo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_facturePrintHebdo.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_facturePrintHebdo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(251)))), ((int)(((byte)(253)))));
+            this.btn_facturePrintHebdo.Location = new System.Drawing.Point(0, 170);
+            this.btn_facturePrintHebdo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_facturePrintHebdo.Name = "btn_facturePrintHebdo";
+            this.btn_facturePrintHebdo.Size = new System.Drawing.Size(381, 85);
+            this.btn_facturePrintHebdo.TabIndex = 3;
+            this.btn_facturePrintHebdo.Text = "Facture hebdomadaire";
+            this.btn_facturePrintHebdo.UseVisualStyleBackColor = false;
+            this.btn_facturePrintHebdo.Click += new System.EventHandler(this.Btn_facturePrintHebdo_Click);
             // 
-            // bnt_printMensuel
+            // btn_facturePrintMensuel
             // 
-            this.bnt_printMensuel.AutoEllipsis = true;
-            this.bnt_printMensuel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(54)))), ((int)(((byte)(70)))));
-            this.bnt_printMensuel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bnt_printMensuel.FlatAppearance.BorderSize = 0;
-            this.bnt_printMensuel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(120)))), ((int)(((byte)(197)))));
-            this.bnt_printMensuel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bnt_printMensuel.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bnt_printMensuel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(251)))), ((int)(((byte)(253)))));
-            this.bnt_printMensuel.Location = new System.Drawing.Point(0, 85);
-            this.bnt_printMensuel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.bnt_printMensuel.Name = "bnt_printMensuel";
-            this.bnt_printMensuel.Size = new System.Drawing.Size(381, 85);
-            this.bnt_printMensuel.TabIndex = 1;
-            this.bnt_printMensuel.Text = "Facture Mensuel";
-            this.bnt_printMensuel.UseVisualStyleBackColor = false;
-            this.bnt_printMensuel.Click += new System.EventHandler(this.bnt_printMensuel_Click);
+            this.btn_facturePrintMensuel.AutoEllipsis = true;
+            this.btn_facturePrintMensuel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(54)))), ((int)(((byte)(70)))));
+            this.btn_facturePrintMensuel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_facturePrintMensuel.FlatAppearance.BorderSize = 0;
+            this.btn_facturePrintMensuel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(120)))), ((int)(((byte)(197)))));
+            this.btn_facturePrintMensuel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_facturePrintMensuel.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_facturePrintMensuel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(251)))), ((int)(((byte)(253)))));
+            this.btn_facturePrintMensuel.Location = new System.Drawing.Point(0, 85);
+            this.btn_facturePrintMensuel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_facturePrintMensuel.Name = "btn_facturePrintMensuel";
+            this.btn_facturePrintMensuel.Size = new System.Drawing.Size(381, 85);
+            this.btn_facturePrintMensuel.TabIndex = 2;
+            this.btn_facturePrintMensuel.Text = "Facture Mensuel";
+            this.btn_facturePrintMensuel.UseVisualStyleBackColor = false;
+            this.btn_facturePrintMensuel.Click += new System.EventHandler(this.Btn_facturePrintMensuel_Click);
             // 
-            // btn_printAnnuel
+            // btn_facturePrintAnnuel
             // 
-            this.btn_printAnnuel.AutoEllipsis = true;
-            this.btn_printAnnuel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(54)))), ((int)(((byte)(70)))));
-            this.btn_printAnnuel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_printAnnuel.FlatAppearance.BorderSize = 0;
-            this.btn_printAnnuel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(120)))), ((int)(((byte)(197)))));
-            this.btn_printAnnuel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_printAnnuel.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_printAnnuel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(251)))), ((int)(((byte)(253)))));
-            this.btn_printAnnuel.Location = new System.Drawing.Point(0, 0);
-            this.btn_printAnnuel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btn_printAnnuel.Name = "btn_printAnnuel";
-            this.btn_printAnnuel.Size = new System.Drawing.Size(381, 85);
-            this.btn_printAnnuel.TabIndex = 0;
-            this.btn_printAnnuel.Text = "Facture Annuelle";
-            this.btn_printAnnuel.UseVisualStyleBackColor = false;
-            this.btn_printAnnuel.Click += new System.EventHandler(this.btn_printAnnuel_Click);
+            this.btn_facturePrintAnnuel.AutoEllipsis = true;
+            this.btn_facturePrintAnnuel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(54)))), ((int)(((byte)(70)))));
+            this.btn_facturePrintAnnuel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_facturePrintAnnuel.FlatAppearance.BorderSize = 0;
+            this.btn_facturePrintAnnuel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(120)))), ((int)(((byte)(197)))));
+            this.btn_facturePrintAnnuel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_facturePrintAnnuel.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_facturePrintAnnuel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(251)))), ((int)(((byte)(253)))));
+            this.btn_facturePrintAnnuel.Location = new System.Drawing.Point(0, 0);
+            this.btn_facturePrintAnnuel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_facturePrintAnnuel.Name = "btn_facturePrintAnnuel";
+            this.btn_facturePrintAnnuel.Size = new System.Drawing.Size(381, 85);
+            this.btn_facturePrintAnnuel.TabIndex = 1;
+            this.btn_facturePrintAnnuel.Text = "Facture Annuelle";
+            this.btn_facturePrintAnnuel.UseVisualStyleBackColor = false;
+            this.btn_facturePrintAnnuel.Click += new System.EventHandler(this.Btn_facturePrintAnnuel_Click);
             // 
             // Frm_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(1376, 997);
-            this.Controls.Add(this.tbc_Main);
             this.Controls.Add(this.pnl_footer);
             this.Controls.Add(this.pnl_AJustHeadr);
             this.Controls.Add(this.pnl_menuMain);
+            this.Controls.Add(this.tbc_main);
             this.DisplayHeader = false;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Frm_main";
@@ -1259,7 +1266,7 @@ namespace CryptoStake_v3
             this.pnl_infoUser.ResumeLayout(false);
             this.pnl_infoUser.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pct_iconUsr)).EndInit();
-            this.tbc_Main.ResumeLayout(false);
+            this.tbc_main.ResumeLayout(false);
             this.tbp_home.ResumeLayout(false);
             this.pnl_searchHome.ResumeLayout(false);
             this.pnl_searchHome.PerformLayout();
@@ -1277,17 +1284,17 @@ namespace CryptoStake_v3
             this.pnl_searchAchatVente.ResumeLayout(false);
             this.pnl_searchAchatVente.PerformLayout();
             this.pnl_achat_vente.ResumeLayout(false);
-            this.pnl_transac.ResumeLayout(false);
-            this.pnl_transac.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_slTpVal)).EndInit();
+            this.pnl_transacAchat.ResumeLayout(false);
+            this.pnl_transacAchat.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_achatSlTpVal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_achatQuant)).EndInit();
             this.gpb_slTp.ResumeLayout(false);
             this.gpb_slTp.PerformLayout();
             this.tbp_facture.ResumeLayout(false);
             this.pnl_print.ResumeLayout(false);
             this.pnl_printAction.ResumeLayout(false);
-            this.pnl_fond.ResumeLayout(false);
-            this.pnl_fond.PerformLayout();
+            this.pnl_factureCommand.ResumeLayout(false);
+            this.pnl_factureCommand.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_facture)).EndInit();
             this.ResumeLayout(false);
 
@@ -1303,7 +1310,7 @@ namespace CryptoStake_v3
         private System.Windows.Forms.Panel pnl_ajustTab;
         private System.Windows.Forms.Panel pnl_footer;
         private System.Windows.Forms.Panel pnl_infoUser;
-        private System.Windows.Forms.TabControl tbc_Main;
+        private System.Windows.Forms.TabControl tbc_main;
         private System.Windows.Forms.TabPage tbp_home;
         private System.Windows.Forms.TabPage tbp_wallet;
         private System.Windows.Forms.TabPage tbp_shop;
@@ -1314,31 +1321,30 @@ namespace CryptoStake_v3
         private System.Windows.Forms.Panel pnl_chart;
         private System.Windows.Forms.DataVisualization.Charting.Chart ChartPortfolio;
         private FontAwesome.Sharp.IconButton btn_logout;
-        private System.Windows.Forms.PictureBox pct_logo;
         private MetroFramework.Controls.MetroLabel lbl_Usr;
         private MetroFramework.Controls.MetroLabel lbl_welcome;
         private FontAwesome.Sharp.IconPictureBox pct_iconUsr;
         private MetroFramework.Controls.MetroPanel pnl_print;
         private System.Windows.Forms.Panel pnl_printAction;
-        private System.Windows.Forms.Button btn_print;
-        private System.Windows.Forms.Button btn_printHebdo;
-        private System.Windows.Forms.Panel pnl_fond;
-        private System.Windows.Forms.Button bnt_printMensuel;
-        private System.Windows.Forms.Button btn_printAnnuel;
-        private System.Windows.Forms.Label lbl_searchPrint;
-        private System.Windows.Forms.TextBox txt_searchFacture;
+        private System.Windows.Forms.Button btn_facturePrint;
+        private System.Windows.Forms.Button btn_facturePrintHebdo;
+        private System.Windows.Forms.Panel pnl_factureCommand;
+        private System.Windows.Forms.Button btn_facturePrintMensuel;
+        private System.Windows.Forms.Button btn_facturePrintAnnuel;
+        private System.Windows.Forms.Label lbl_factureSearch;
+        private System.Windows.Forms.TextBox txt_factureSearch;
         private System.Windows.Forms.DataGridView dtg_facture;
         private System.Windows.Forms.Panel pnl_searchAchatVente;
         private System.Windows.Forms.Label lbl_TopScorer;
         private System.Windows.Forms.Panel pnl_achat_vente;
-        private System.Windows.Forms.Panel pnl_transac;
+        private System.Windows.Forms.Panel pnl_transacAchat;
         private System.Windows.Forms.Panel pnl_searchHome;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txt_searchMain;
+        private System.Windows.Forms.Label lbl_homeSearch;
+        private System.Windows.Forms.TextBox txt_homeSearch;
         private System.Windows.Forms.DataGridView dtg_portfolio;
         private System.Windows.Forms.Panel pnl_searchPortfolio;
-        private System.Windows.Forms.Label lbl_searchProfolio;
-        private System.Windows.Forms.TextBox txt_searchPortfolio;
+        private System.Windows.Forms.Label lbl_portFsearch;
+        private System.Windows.Forms.TextBox txt_portFsearch;
         private MetroFramework.Controls.MetroTile title_Achat;
         private System.Windows.Forms.DataGridView dtg_transac;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_dtg_facture_id;
@@ -1349,15 +1355,15 @@ namespace CryptoStake_v3
         private MetroFramework.Controls.MetroTile title_portfolio;
         private System.Windows.Forms.PrintPreviewControl prnt_prev_facture;
         private MetroFramework.Controls.MetroTile title_facturation;
-        private System.Windows.Forms.Button btn_vendre;
-        private MetroFramework.Controls.MetroComboBox cbo_portfolio;
-        private System.Windows.Forms.TextBox txt_AchatSearch;
-        private System.Windows.Forms.NumericUpDown nud_slTpVal;
+        private System.Windows.Forms.Button btn_portFvendre;
+        private MetroFramework.Controls.MetroComboBox cbo_portFcrypoList;
+        private System.Windows.Forms.TextBox txt_achatSearch;
+        private System.Windows.Forms.NumericUpDown nud_achatSlTpVal;
         private System.Windows.Forms.NumericUpDown nud_achatQuant;
         private System.Windows.Forms.Button btn_achatValider;
         private System.Windows.Forms.GroupBox gpb_slTp;
         private System.Windows.Forms.CheckBox chk_achatSl;
-        private System.Windows.Forms.CheckBox chk_TP;
+        private System.Windows.Forms.CheckBox chk_achatTP;
         private System.Windows.Forms.Label lbl_achatQuant;
         private System.Windows.Forms.Label lbl_achatSearch;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_dtgHome_id;
@@ -1365,7 +1371,7 @@ namespace CryptoStake_v3
         private System.Windows.Forms.DataGridViewTextBoxColumn col_dtgHome_Achat;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_dtgHome_Vente;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_dtgHome_Evol;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_portFretourTransac;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_dtgPortfolio_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_dtgPortfolio_name;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_dtgPortfolio_buyPrice;
@@ -1377,5 +1383,6 @@ namespace CryptoStake_v3
         private System.Windows.Forms.DataGridViewTextBoxColumn col_dtgTransac_Achat;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_dtgTransac_Vente;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_dtgTransac_Evol;
+        private System.Windows.Forms.PictureBox pct_logo;
     }
 }
