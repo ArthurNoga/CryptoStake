@@ -1,7 +1,7 @@
 ﻿
 namespace CryptoStake_v3
 {
-    partial class frm_Login
+    partial class Frm_Login
         
     {
         
@@ -38,7 +38,7 @@ namespace CryptoStake_v3
             this.lbl_username = new MetroFramework.Controls.MetroLabel();
             this.lbl_password = new MetroFramework.Controls.MetroLabel();
             this.txt_username = new MetroFramework.Controls.MetroTextBox();
-            this.metroTextBox5 = new MetroFramework.Controls.MetroTextBox();
+            this.txt_password = new MetroFramework.Controls.MetroTextBox();
             this.pnl_inscription = new MetroFramework.Controls.MetroPanel();
             this.lbl_inscriptionn = new MetroFramework.Controls.MetroLabel();
             this.btn_inscrip = new MetroFramework.Controls.MetroButton();
@@ -71,7 +71,7 @@ namespace CryptoStake_v3
             this.pnl_login.Controls.Add(this.lbl_username);
             this.pnl_login.Controls.Add(this.lbl_password);
             this.pnl_login.Controls.Add(this.txt_username);
-            this.pnl_login.Controls.Add(this.metroTextBox5);
+            this.pnl_login.Controls.Add(this.txt_password);
             this.pnl_login.HorizontalScrollbarBarColor = true;
             this.pnl_login.HorizontalScrollbarHighlightOnWheel = false;
             this.pnl_login.HorizontalScrollbarSize = 15;
@@ -96,7 +96,7 @@ namespace CryptoStake_v3
             this.btn_login.Text = "Login";
             this.btn_login.UseSelectable = true;
             this.btn_login.UseStyleColors = true;
-            this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
+            this.btn_login.Click += new System.EventHandler(this.Btn_login_Click);
             // 
             // pbx_iconUser
             // 
@@ -169,37 +169,37 @@ namespace CryptoStake_v3
             this.txt_username.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_username.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // metroTextBox5
+            // txt_password
             // 
             // 
             // 
             // 
-            this.metroTextBox5.CustomButton.Image = null;
-            this.metroTextBox5.CustomButton.Location = new System.Drawing.Point(287, 1);
-            this.metroTextBox5.CustomButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.metroTextBox5.CustomButton.Name = "";
-            this.metroTextBox5.CustomButton.Size = new System.Drawing.Size(33, 33);
-            this.metroTextBox5.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox5.CustomButton.TabIndex = 1;
-            this.metroTextBox5.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox5.CustomButton.UseSelectable = true;
-            this.metroTextBox5.CustomButton.Visible = false;
-            this.metroTextBox5.Lines = new string[0];
-            this.metroTextBox5.Location = new System.Drawing.Point(28, 346);
-            this.metroTextBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.metroTextBox5.MaxLength = 32767;
-            this.metroTextBox5.Name = "metroTextBox5";
-            this.metroTextBox5.PasswordChar = '*';
-            this.metroTextBox5.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox5.SelectedText = "";
-            this.metroTextBox5.SelectionLength = 0;
-            this.metroTextBox5.SelectionStart = 0;
-            this.metroTextBox5.ShortcutsEnabled = true;
-            this.metroTextBox5.Size = new System.Drawing.Size(321, 35);
-            this.metroTextBox5.TabIndex = 1;
-            this.metroTextBox5.UseSelectable = true;
-            this.metroTextBox5.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox5.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txt_password.CustomButton.Image = null;
+            this.txt_password.CustomButton.Location = new System.Drawing.Point(287, 1);
+            this.txt_password.CustomButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_password.CustomButton.Name = "";
+            this.txt_password.CustomButton.Size = new System.Drawing.Size(33, 33);
+            this.txt_password.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txt_password.CustomButton.TabIndex = 1;
+            this.txt_password.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txt_password.CustomButton.UseSelectable = true;
+            this.txt_password.CustomButton.Visible = false;
+            this.txt_password.Lines = new string[0];
+            this.txt_password.Location = new System.Drawing.Point(28, 346);
+            this.txt_password.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_password.MaxLength = 32767;
+            this.txt_password.Name = "txt_password";
+            this.txt_password.PasswordChar = '*';
+            this.txt_password.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txt_password.SelectedText = "";
+            this.txt_password.SelectionLength = 0;
+            this.txt_password.SelectionStart = 0;
+            this.txt_password.ShortcutsEnabled = true;
+            this.txt_password.Size = new System.Drawing.Size(321, 35);
+            this.txt_password.TabIndex = 1;
+            this.txt_password.UseSelectable = true;
+            this.txt_password.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txt_password.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // pnl_inscription
             // 
@@ -251,7 +251,7 @@ namespace CryptoStake_v3
             this.btn_inscrip.Text = "S\'inscrire";
             this.btn_inscrip.UseSelectable = true;
             this.btn_inscrip.UseStyleColors = true;
-            this.btn_inscrip.Click += new System.EventHandler(this.btn_inscrip_Click);
+            this.btn_inscrip.Click += new System.EventHandler(this.Btn_inscrip_Click);
             // 
             // lbl_Inscrip_password
             // 
@@ -452,7 +452,7 @@ namespace CryptoStake_v3
             this.Padding = new System.Windows.Forms.Padding(30, 92, 30, 31);
             this.Resizable = false;
             this.Text = "Login";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.Frm_main_Load);
             this.pnl_login.ResumeLayout(false);
             this.pnl_login.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_iconUser)).EndInit();
@@ -468,7 +468,7 @@ namespace CryptoStake_v3
         private MetroFramework.Controls.MetroPanel pnl_inscription;
         private MetroFramework.Controls.MetroTextBox txt_Inscrip_nom;
         private MetroFramework.Controls.MetroLabel lbl_password;
-        private MetroFramework.Controls.MetroTextBox metroTextBox5;
+        private MetroFramework.Controls.MetroTextBox txt_password;
         private MetroFramework.Controls.MetroLabel lbl_Inscrip_password;
         private MetroFramework.Controls.MetroLabel lbl_Inscrip_prenom;
         private MetroFramework.Controls.MetroTextBox txt_inscrip_password;

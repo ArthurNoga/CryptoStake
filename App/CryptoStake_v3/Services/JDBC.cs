@@ -35,7 +35,7 @@ namespace CryptoStake_v3.Services
         }
 
 
-        public void testConnection()
+        public void TestConnection()
         {
             //using connection string attributes to connect to Oracle Database
 
@@ -47,7 +47,7 @@ namespace CryptoStake_v3.Services
             Console.WriteLine("Disconnected");
         }
 
-        public void fetch_pers()
+        public void Fetch_pers()
         {
             String SQL = " Select * from Pers";
             OracleCommand req = new OracleCommand();
@@ -75,7 +75,7 @@ namespace CryptoStake_v3.Services
         }
 
 
-        public void insertUser(String p_nom, String p_prenom, String p_username, String p_password)
+        public void InsertUser(String p_nom, String p_prenom, String p_username, String p_password)
         {
 
             String sql = "pkg_CryptoStake_RestUser.ajoutUtilisateur";
@@ -118,18 +118,7 @@ namespace CryptoStake_v3.Services
             con.Close();
         }
 
-        public DataSet fillDataset(String table)
-        {
-            String sql = "select * from " + table;
-            OracleCommand req = new OracleCommand(sql, con);
-            req.CommandType = CommandType.Text;
 
-            OracleDataAdapter da = new OracleDataAdapter(req);
-            OracleCommandBuilder cb = new OracleCommandBuilder(da);
-            DataSet ds = new DataSet();
-
-            return ds;
-        }
     }
 }
 

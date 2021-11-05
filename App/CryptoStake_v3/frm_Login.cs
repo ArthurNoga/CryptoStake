@@ -1,5 +1,4 @@
-﻿using CryptoStake_v3.Services;
-using MetroFramework;
+﻿using MetroFramework;
 using MetroFramework.Forms;
 using System;
 using System.Linq;
@@ -7,12 +6,12 @@ using System.Windows.Forms;
 
 namespace CryptoStake_v3
 {
-    public partial class frm_Login : MetroForm
+    public partial class Frm_Login : MetroForm
 
 
 
     {
-        public frm_Login()
+        public Frm_Login()
         {
             InitializeComponent();
 
@@ -20,34 +19,58 @@ namespace CryptoStake_v3
 
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void Frm_main_Load(object sender, EventArgs e)
         {
-            JDBC database = JDBC.GetInstance();
-            database.InsertCryptos();
+            //TODO: charger database
+            txt_username.Focus();
         }
+         
 
-        private void btn_login_Click(object sender, EventArgs e)
+
+
+
+        // Login  
+        private void Btn_login_Click(object sender, EventArgs e)
         {
             Boolean isValid = false;
-            if (txt_username.Text == "error")
+            if (txt_username.Text == "error" & txt_password.Text == "error")//TODO :query username +login +cryptage Login
             {
                 MetroMessageBox.Show(this, "Username ou Password incorrect", "Problème lors de la Connection", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
+
+            if (txt_password.Text == "" || txt_username.Text == "error")
+            {
+                MetroMessageBox.Show(this, "Password ou login Vide", "Champs incomplets", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
             else if (txt_username.Text == "ok") { isValid = true; }
             if (isValid)
             {
-                MetroForm main = new frm_main();
+                MetroForm main = new Frm_main();
                 main.Show();
                 this.Hide();
             }
 
         }
 
-        private void btn_inscrip_Click(object sender, EventArgs e)
+        
+        
+        //inscription
+        
+        private void Btn_inscrip_Click(object sender, EventArgs e)
         {
-            if (ContainsNumber(txt_Inscrip_nom.Text) || ContainsNumber(txt_Inscrip_Prenom.Text)) { MetroMessageBox.Show(this, "Le prenom ou le nom contient un chiffre", "Un paramètre est faux", MessageBoxButtons.OK, MessageBoxIcon.Asterisk); }
+            if (ContainsNumber(txt_Inscrip_nom.Text) || ContainsNumber(txt_Inscrip_Prenom.Text))
+            { MetroMessageBox.Show(this, "Le prenom ou le nom contient un chiffre", "Un paramètre est faux", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                if (ContainsNumber(txt_Inscrip_Prenom.Text)) { txt_Inscrip_Prenom.Focus(); }
+                if (ContainsNumber(txt_Inscrip_nom.Text)) { txt_Inscrip_nom.Focus(); }
+            }
 
-            else { MetroMessageBox.Show(this, "Merci de vous etre inscrit sur CryptoStake", "Inscritpion Réussie", MessageBoxButtons.OK, MessageBoxIcon.Asterisk); }
+            else
+            {
+                //ecriture dans la database nouvel user
+                
+
+                MetroMessageBox.Show(this, "Merci de vous etre inscrit sur CryptoStake, Vous pouvez maintenant vous logger pour accéder à votre compte ", "Inscritpion Réussie", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
         }
 
 
