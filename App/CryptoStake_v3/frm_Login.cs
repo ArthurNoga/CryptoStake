@@ -58,8 +58,12 @@ namespace CryptoStake_v3
         
         private void Btn_inscrip_Click(object sender, EventArgs e)
         {
-            if (ContainsNumber(txt_Inscrip_nom.Text) || ContainsNumber(txt_Inscrip_Prenom.Text))
-            { MetroMessageBox.Show(this, "Le prenom ou le nom contient un chiffre", "Un paramètre est faux", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            if(txt_Inscrip_nom.Text==""|| txt_Inscrip_Prenom.Text== "" || txt_Inscrip_username.Text=="" ||txt_inscrip_password.Text=="") {
+                MetroMessageBox.Show(this, "veuillez remplir tout les champs", "Champs incomplets", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+            else if (ContainsNumber(txt_Inscrip_nom.Text) || ContainsNumber(txt_Inscrip_Prenom.Text))
+            { MetroMessageBox.Show(this, "Le prenom ou le nom contient un chiffre", "Un paramètre est faux", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 if (ContainsNumber(txt_Inscrip_Prenom.Text)) { txt_Inscrip_Prenom.Focus(); }
                 if (ContainsNumber(txt_Inscrip_nom.Text)) { txt_Inscrip_nom.Focus(); }
             }
