@@ -938,7 +938,7 @@ namespace CryptoStake_v3
             this.btn_achatValider.Name = "btn_achatValider";
             this.btn_achatValider.Size = new System.Drawing.Size(300, 32);
             this.btn_achatValider.TabIndex = 5;
-            this.btn_achatValider.Text = "&Vendre";
+            this.btn_achatValider.Text = "Acheter";
             this.btn_achatValider.UseVisualStyleBackColor = false;
             this.btn_achatValider.Click += new System.EventHandler(this.Btn_achatValider_Click);
             // 
