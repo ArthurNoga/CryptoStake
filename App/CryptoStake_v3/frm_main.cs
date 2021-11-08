@@ -88,12 +88,12 @@ namespace CryptoStake_v3
                 txt_achatSearch.Focus();
             }
 
-            else if ((chk_achatSl.Checked == true || chk_achatTP.Checked == true)& nud_achatSlTpVal.Value == 0)
+            else if ((chk_achatSl.Checked == true || chk_achatTP.Checked == true) & nud_achatSlTpVal.Value == 0)
             {
-                
-                    MetroMessageBox.Show(this, "Veuillez choisir un pourcentage pour votre Stop loss/Take profit", "Champs incomplets", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    nud_achatSlTpVal.Focus();
-               
+
+                MetroMessageBox.Show(this, "Veuillez choisir un pourcentage pour votre Stop loss/Take profit", "Champs incomplets", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                nud_achatSlTpVal.Focus();
+
             }
 
             //TODO: verifier si le solde est sufisant 
@@ -102,8 +102,13 @@ namespace CryptoStake_v3
             //MetroMessageBox.Show(this, "Approvisionner votre Compte", "Solde insufisant", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             else
             {
+                if(chk_achatSl.Checked == true || chk_achatTP.Checked == true){
+                    String ajout = chk_achatSl.Checked == true ? "avec un stop Loss a -" + nud_achatSlTpVal.Value + "% de la valeur d'achat" : "avec un take profit a +" + nud_achatSlTpVal.Value + "% de la valeur d'achat";
+                    MetroMessageBox.Show(this, "Vous venez d'acheter de la cryptomonnaies :" + nud_achatQuant.Value + " unités de " + txt_achatSearch.Text+ajout, "Achat Validé", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                }
+                else {
                     MetroMessageBox.Show(this, "Vous venez d'acheter de la cryptomonnaies :" + nud_achatQuant.Value + " unités de " + txt_achatSearch.Text, "Achat Validé", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-            }
+                } }
 
         }
 

@@ -33,20 +33,28 @@ namespace CryptoStake_v3
         private void Btn_login_Click(object sender, EventArgs e)
         {
             Boolean isValid = false;
+            String user = "";
             if (txt_username.Text == "error" & txt_password.Text == "error")//TODO :query username +login +cryptage Login
             {
-                MetroMessageBox.Show(this, "Username ou Password incorrect", "Problème lors de la Connection", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MetroMessageBox.Show(this, "Username ou Password incorrect", "Problème lors de la Connection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
             if (txt_password.Text == "" || txt_username.Text == "error")
             {
-                MetroMessageBox.Show(this, "Password ou login Vide", "Champs incomplets", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MetroMessageBox.Show(this, "Password ou login Vide", "Champs incomplets", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else if (txt_username.Text == "ok") { isValid = true; }
+
+
+            // TODO: verification du login avec la data base instanciation singleton user-> user=user.getInstance.getNom...
+            else if (txt_username.Text == "ok") { isValid = true; user = " Arthur Noguera"; }
             if (isValid)
             {
+               
+                   
+           
                 MetroForm main = new Frm_main();
                 main.Show();
+                MetroMessageBox.Show(this, "Bienvenue sur CryptoStake " + user, "Connection Réussie", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 this.Hide();
             }
 
@@ -71,8 +79,6 @@ namespace CryptoStake_v3
             else
             {
                 //ecriture dans la database nouvel user
-                
-
                 MetroMessageBox.Show(this, "Merci de vous etre inscrit sur CryptoStake, Vous pouvez maintenant vous logger pour accéder à votre compte ", "Inscritpion Réussie", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
         }
