@@ -46,7 +46,7 @@ namespace CryptoStake_v3
 
 
             // TODO: verification du login avec la data base instanciation singleton user-> user=user.getInstance.getNom...
-            else if (txt_username.Text == "ok") { isValid = true; user = " Arthur Noguera"; }
+            else if (txt_username.Text == "arthur") { isValid = true; user = " Arthur Noguera"; }
             if (isValid)
             {
                
