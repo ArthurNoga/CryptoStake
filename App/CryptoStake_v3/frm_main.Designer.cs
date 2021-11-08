@@ -49,7 +49,7 @@ namespace CryptoStake_v3
             this.pnl_infoUser = new System.Windows.Forms.Panel();
             this.lbl_Usr = new MetroFramework.Controls.MetroLabel();
             this.lbl_welcome = new MetroFramework.Controls.MetroLabel();
-            this.pct_iconUsr = new FontAwesome.Sharp.IconPictureBox();
+            this.pic_iconUsr = new FontAwesome.Sharp.IconPictureBox();
             this.tbc_main = new System.Windows.Forms.TabControl();
             this.tbp_home = new System.Windows.Forms.TabPage();
             this.pnl_searchHome = new System.Windows.Forms.Panel();
@@ -122,7 +122,7 @@ namespace CryptoStake_v3
             this.pnl_menuMain.SuspendLayout();
             this.pnl_footer.SuspendLayout();
             this.pnl_infoUser.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pct_iconUsr)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_iconUsr)).BeginInit();
             this.tbc_main.SuspendLayout();
             this.tbp_home.SuspendLayout();
             this.pnl_searchHome.SuspendLayout();
@@ -326,7 +326,7 @@ namespace CryptoStake_v3
             // 
             this.pnl_infoUser.Controls.Add(this.lbl_Usr);
             this.pnl_infoUser.Controls.Add(this.lbl_welcome);
-            this.pnl_infoUser.Controls.Add(this.pct_iconUsr);
+            this.pnl_infoUser.Controls.Add(this.pic_iconUsr);
             this.pnl_infoUser.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnl_infoUser.Location = new System.Drawing.Point(962, 0);
             this.pnl_infoUser.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -361,18 +361,18 @@ namespace CryptoStake_v3
             // 
             // pct_iconUsr
             // 
-            this.pct_iconUsr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.pct_iconUsr.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(85)))));
-            this.pct_iconUsr.IconChar = FontAwesome.Sharp.IconChar.UserCircle;
-            this.pct_iconUsr.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(85)))));
-            this.pct_iconUsr.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.pct_iconUsr.IconSize = 72;
-            this.pct_iconUsr.Location = new System.Drawing.Point(127, 10);
-            this.pct_iconUsr.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pct_iconUsr.Name = "pct_iconUsr";
-            this.pct_iconUsr.Size = new System.Drawing.Size(72, 74);
-            this.pct_iconUsr.TabIndex = 0;
-            this.pct_iconUsr.TabStop = false;
+            this.pic_iconUsr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.pic_iconUsr.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(85)))));
+            this.pic_iconUsr.IconChar = FontAwesome.Sharp.IconChar.UserCircle;
+            this.pic_iconUsr.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(85)))));
+            this.pic_iconUsr.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.pic_iconUsr.IconSize = 72;
+            this.pic_iconUsr.Location = new System.Drawing.Point(127, 10);
+            this.pic_iconUsr.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pic_iconUsr.Name = "pct_iconUsr";
+            this.pic_iconUsr.Size = new System.Drawing.Size(72, 74);
+            this.pic_iconUsr.TabIndex = 0;
+            this.pic_iconUsr.TabStop = false;
             // 
             // tbc_main
             // 
@@ -1267,7 +1267,7 @@ namespace CryptoStake_v3
             this.pnl_footer.ResumeLayout(false);
             this.pnl_infoUser.ResumeLayout(false);
             this.pnl_infoUser.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pct_iconUsr)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_iconUsr)).EndInit();
             this.tbc_main.ResumeLayout(false);
             this.tbp_home.ResumeLayout(false);
             this.pnl_searchHome.ResumeLayout(false);
@@ -1326,7 +1326,7 @@ namespace CryptoStake_v3
         private FontAwesome.Sharp.IconButton btn_logout;
         private MetroFramework.Controls.MetroLabel lbl_Usr;
         private MetroFramework.Controls.MetroLabel lbl_welcome;
-        private FontAwesome.Sharp.IconPictureBox pct_iconUsr;
+        private FontAwesome.Sharp.IconPictureBox pic_iconUsr;
         private MetroFramework.Controls.MetroPanel pnl_print;
         private System.Windows.Forms.Panel pnl_printAction;
         private System.Windows.Forms.Button btn_facturePrint;

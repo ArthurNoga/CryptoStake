@@ -34,7 +34,7 @@ namespace CryptoStake_v3
         {
             this.pnl_login = new MetroFramework.Controls.MetroPanel();
             this.btn_login = new MetroFramework.Controls.MetroButton();
-            this.pbx_iconUser = new System.Windows.Forms.PictureBox();
+            this.pic_iconUser = new System.Windows.Forms.PictureBox();
             this.lbl_username = new MetroFramework.Controls.MetroLabel();
             this.lbl_password = new MetroFramework.Controls.MetroLabel();
             this.txt_username = new MetroFramework.Controls.MetroTextBox();
@@ -54,11 +54,11 @@ namespace CryptoStake_v3
             this.colorDialog2 = new System.Windows.Forms.ColorDialog();
             this.colorDialog3 = new System.Windows.Forms.ColorDialog();
             this.colorDialog4 = new System.Windows.Forms.ColorDialog();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pic_logo = new System.Windows.Forms.PictureBox();
             this.pnl_login.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbx_iconUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_iconUser)).BeginInit();
             this.pnl_inscription.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_login
@@ -67,7 +67,7 @@ namespace CryptoStake_v3
             | System.Windows.Forms.AnchorStyles.Left)));
             this.pnl_login.BackColor = System.Drawing.Color.White;
             this.pnl_login.Controls.Add(this.btn_login);
-            this.pnl_login.Controls.Add(this.pbx_iconUser);
+            this.pnl_login.Controls.Add(this.pic_iconUser);
             this.pnl_login.Controls.Add(this.lbl_username);
             this.pnl_login.Controls.Add(this.lbl_password);
             this.pnl_login.Controls.Add(this.txt_username);
@@ -100,14 +100,14 @@ namespace CryptoStake_v3
             // 
             // pbx_iconUser
             // 
-            this.pbx_iconUser.Image = global::CryptoStake_v3.Properties.Resources.user;
-            this.pbx_iconUser.Location = new System.Drawing.Point(93, 43);
-            this.pbx_iconUser.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pbx_iconUser.Name = "pbx_iconUser";
-            this.pbx_iconUser.Size = new System.Drawing.Size(192, 169);
-            this.pbx_iconUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbx_iconUser.TabIndex = 6;
-            this.pbx_iconUser.TabStop = false;
+            this.pic_iconUser.Image = global::CryptoStake_v3.Properties.Resources.user;
+            this.pic_iconUser.Location = new System.Drawing.Point(93, 43);
+            this.pic_iconUser.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pic_iconUser.Name = "pbx_iconUser";
+            this.pic_iconUser.Size = new System.Drawing.Size(192, 169);
+            this.pic_iconUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_iconUser.TabIndex = 6;
+            this.pic_iconUser.TabStop = false;
             // 
             // lbl_username
             // 
@@ -430,20 +430,20 @@ namespace CryptoStake_v3
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::CryptoStake_v3.Properties.Resources.logo_transparent;
-            this.pictureBox1.Location = new System.Drawing.Point(332, 7);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(321, 196);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
+            this.pic_logo.Image = global::CryptoStake_v3.Properties.Resources.logo_transparent;
+            this.pic_logo.Location = new System.Drawing.Point(332, 7);
+            this.pic_logo.Name = "pictureBox1";
+            this.pic_logo.Size = new System.Drawing.Size(321, 196);
+            this.pic_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_logo.TabIndex = 3;
+            this.pic_logo.TabStop = false;
             // 
             // frm_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(1017, 672);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pic_logo);
             this.Controls.Add(this.pnl_login);
             this.Controls.Add(this.pnl_inscription);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaption;
@@ -455,10 +455,10 @@ namespace CryptoStake_v3
             this.Load += new System.EventHandler(this.Frm_main_Load);
             this.pnl_login.ResumeLayout(false);
             this.pnl_login.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbx_iconUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_iconUser)).EndInit();
             this.pnl_inscription.ResumeLayout(false);
             this.pnl_inscription.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -478,7 +478,7 @@ namespace CryptoStake_v3
         private MetroFramework.Controls.MetroLabel lbl_Inscrip_nom;
         private MetroFramework.Controls.MetroLabel lbl_username;
         private MetroFramework.Controls.MetroTextBox txt_username;
-        private System.Windows.Forms.PictureBox pbx_iconUser;
+        private System.Windows.Forms.PictureBox pic_iconUser;
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.ColorDialog colorDialog2;
         private System.Windows.Forms.ColorDialog colorDialog3;
@@ -486,7 +486,7 @@ namespace CryptoStake_v3
         private MetroFramework.Controls.MetroButton btn_login;
         private MetroFramework.Controls.MetroButton btn_inscrip;
         private MetroFramework.Controls.MetroLabel lbl_inscriptionn;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pic_logo;
     }
 }
 
