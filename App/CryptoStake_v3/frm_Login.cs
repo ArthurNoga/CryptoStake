@@ -36,10 +36,10 @@ namespace CryptoStake_v3
             String user = "";
             if (txt_username.Text == "error" & txt_password.Text == "error")//TODO :query username +login +cryptage Login
             {
-                MetroMessageBox.Show(this, "Username ou Password incorrect", "Problème lors de la Connection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MetroMessageBox.Show(this, "Username ou Password incorrect", "Problème lors de la Connection", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            if (txt_password.Text == "" || txt_username.Text == "error")
+            if (txt_password.Text == "" || txt_username.Text == "")
             {
                 MetroMessageBox.Show(this, "Password ou login Vide", "Champs incomplets", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
