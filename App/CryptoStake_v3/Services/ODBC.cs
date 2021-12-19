@@ -6,11 +6,11 @@ using System.Data;
 
 namespace CryptoStake_v3.Services
 {
-    class JDBC
+    class ODBC
     {
 
 
-        private JDBC()
+        private ODBC()
         {
 
         }
@@ -18,22 +18,23 @@ namespace CryptoStake_v3.Services
         OracleConnection con = new OracleConnection(ConnectionString);
 
         private static String admin = "USER ID=SYSTEM;;Password=AZertyui21!;Data Source= localhost:1521 / XE; PERSIST SECURITY INFO = True";
+         
+        public OracleConnection getConnection() { return this.con; }
 
+        public static String ConnectionString { get; set; } = admin;
 
+        private static ODBC _instance;
 
-        private static String ConnectionString { get; set; } = admin;
-
-        private static JDBC _instance;
-
-        public static JDBC GetInstance()
+        public static ODBC GetInstance()
         {
             if (_instance == null)
             {
-                _instance = new JDBC();
+                _instance = new ODBC();
             }
             return _instance;
         }
 
+        
 
         public void TestConnection()
         {
@@ -105,7 +106,7 @@ namespace CryptoStake_v3.Services
         }
         public void InsertCryptoToDB(Crypto crypto)
         {
-            String sql = "pkg_manage_crypto.Add_updateCrypto";
+            String sql = "Cryptostake_data.pkg_crypto.upd_add_crypto";
             OracleCommand req = new OracleCommand(sql, con);
             req.CommandType = CommandType.StoredProcedure;
             req.Parameters.Add("CRYPT_ID", OracleDbType.Varchar2).Value = crypto.id;
@@ -114,10 +115,9 @@ namespace CryptoStake_v3.Services
             req.Parameters.Add("CRYPT_VENTE", OracleDbType.Double).Value = crypto.prixVen;
             req.Parameters.Add("CRYPT_EVOL", OracleDbType.Double).Value = crypto.evol;
             con.Open();
-            req.ExecuteNonQuery();
+                req.ExecuteNonQuery();
             con.Close();
         }
-
 
     }
 }

@@ -1,6 +1,9 @@
-﻿using MetroFramework;
+﻿using CryptoStake_v3.Services;
+using MetroFramework;
 using MetroFramework.Forms;
+using Oracle.DataAccess.Client;
 using System;
+using System.Data;
 using System.Windows.Forms;
 
 
@@ -8,27 +11,25 @@ namespace CryptoStake_v3
 {
     public partial class Frm_main : MetroForm
     {
+        ODBC database = ODBC.GetInstance();
         public Frm_main()
         {
             InitializeComponent();
 
-
+            
         }
 
         private void Frm_main_Load(object sender, EventArgs e)
         {
-            btn_homeMain.Focus();
-            LblUsrload();
-
-
-
-            ChartLoader();
+            
+            
+           btn_homeMain.Focus();
+           LblUsrload();
+           ChartLoader();
+           FillMainDatagrid();
+           FillPortFolio(10);
+           FillAchatDatagrid();
         }
-
-
-
-
-
 
 
         private void LblUsrload()
@@ -38,8 +39,7 @@ namespace CryptoStake_v3
             //User usr=User.GetInstance()
             //String rtn =usr.GetPrenom+" "+usr.GetNom()
             String rtn = "Arthur Noguera-Augey";
-            lbl_Usr.Text = rtn;
-
+        
         }
 
         // Portfolio
@@ -157,6 +157,86 @@ namespace CryptoStake_v3
 
 
 
+
+
+
+
+
+
+
+        //fill Datagrids
+
+        public void FillMainDatagrid()
+        {
+
+            OracleConnection con = new OracleConnection(ODBC.ConnectionString);
+
+            con.Open();
+
+            String sql = " Select * from cryptostake_data.vw_mainpage";
+            OracleCommand cmd = new OracleCommand(sql, con);
+            cmd.CommandType = CommandType.Text;
+
+            OracleDataAdapter da = new OracleDataAdapter(cmd);
+            OracleCommandBuilder cb = new OracleCommandBuilder(da);
+            DataSet ds = new DataSet();
+
+            da.Fill(ds);
+            dtg_Home.DataSource = ds.Tables[0];
+         
+        }
+
+        public void FillPortFolio(int persID)
+        {
+            OracleConnection con = new OracleConnection(ODBC.ConnectionString);
+            con.Open();
+            String sql = "Select transac_crypt_id as Id, transac_date as Dates, transac_quantite as Quantité, transac_type as Type, transac_prix as Valeur from Cryptostake_data.cryp_transac join Cryptostake_data.cryp_compte on transac_compt_id = compt_id join Cryptostake_data.cryp_pers on compt_pers_id = pers_id where pers_id =" + persID;
+            OracleCommand cmd = new OracleCommand(sql, con);
+            cmd.CommandType = CommandType.Text;
+            OracleDataAdapter da = new OracleDataAdapter(cmd);
+            OracleCommandBuilder cb = new OracleCommandBuilder(da);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            dtg_portfolio.DataSource = ds.Tables[0];
+        }
+
+
+
+
+        public void FillAchatDatagrid()
+        {
+
+            OracleConnection con = new OracleConnection(ODBC.ConnectionString);
+
+            con.Open();
+
+            String sql = " Select * from cryptostake_data.vw_achat";
+            OracleCommand cmd = new OracleCommand(sql, con);
+            cmd.CommandType = CommandType.Text;
+
+            OracleDataAdapter da = new OracleDataAdapter(cmd);
+            OracleCommandBuilder cb = new OracleCommandBuilder(da);
+            DataSet ds = new DataSet();
+
+            da.Fill(ds);
+            dtg_transac.DataSource = ds.Tables[0];
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         //miscellaneous
 
 
@@ -189,15 +269,17 @@ namespace CryptoStake_v3
             ClearSearches(); 
             txt_homeSearch.Focus();
             //TODO update database
+            database.InsertALLCryptosToDB();
         }
 
         private void Btn_achatVente_Click(object sender, EventArgs e)
         {
-            tbc_main.SelectedTab = tbp_shop;
+                tbc_main.SelectedTab = tbp_shop;
             ClearTransac();
             ClearSearches();
             txt_achatSearch.Focus();
             //TODO update database
+            database.InsertALLCryptosToDB();
 
         }
 
@@ -208,6 +290,7 @@ namespace CryptoStake_v3
             ClearSearches();
             txt_factureSearch.Focus();
             //TODO update database
+            database.InsertALLCryptosToDB();
         }
 
 
@@ -218,6 +301,7 @@ namespace CryptoStake_v3
             ClearSearches();
             txt_portFsearch.Focus();
             //TODO update database
+            database.InsertALLCryptosToDB();
 
         }
 
@@ -241,5 +325,7 @@ namespace CryptoStake_v3
             Application.Exit();
         }
 
+
+        
     }
-}
+    }

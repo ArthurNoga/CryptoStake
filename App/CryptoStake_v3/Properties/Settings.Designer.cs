@@ -33,5 +33,16 @@ namespace CryptoStake_v3.Properties {
                 return ((string)(this["Home_main"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("USER ID=SYSTEM;PASSWORD=AZertyui21!;DATA SOURCE=localhost:1521/XE;PERSIST SECURIT" +
+            "Y INFO=True")]
+        public string cryptostake {
+            get {
+                return ((string)(this["cryptostake"]));
+            }
+        }
     }
 }

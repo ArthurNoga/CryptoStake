@@ -1,16 +1,15 @@
-﻿using MetroFramework;
+﻿using CryptoStake_v3.Services;
+using MetroFramework;
 using MetroFramework.Forms;
 using System;
 using System.Linq;
 using System.Windows.Forms;
 
+
 namespace CryptoStake_v3
 {
-    public partial class Frm_Login : MetroForm
-
-
-
-    {
+    public partial class Frm_Login : MetroForm{
+        ODBC j = ODBC.GetInstance();
         public Frm_Login()
         {
             InitializeComponent();
@@ -48,6 +47,7 @@ namespace CryptoStake_v3
                 MetroForm main = new Frm_main();
                 main.Show();
                 this.Hide();
+                j.InsertALLCryptosToDB();
             }
 
         }
