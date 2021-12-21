@@ -702,6 +702,7 @@ namespace CryptoStake_v3
             this.txt_achatSearch.Name = "txt_achatSearch";
             this.txt_achatSearch.Size = new System.Drawing.Size(300, 20);
             this.txt_achatSearch.TabIndex = 0;
+            this.txt_achatSearch.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_achatSearch_KeyUp);
             // 
             // nud_achatSlTpVal
             // 

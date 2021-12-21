@@ -179,3 +179,4 @@ C:\Users\arthur.nogueraa\Documents\CryptoStake\App\CryptoStake_v3\obj\Debug\Cryp
 C:\Users\arthur.nogueraa\Documents\CryptoStake\App\CryptoStake_v3\obj\Debug\CryptoStake_v3.csproj.CopyComplete
 C:\Users\arthur.nogueraa\Documents\CryptoStake\App\CryptoStake_v3\obj\Debug\CryptoStake_v3.exe
 C:\Users\arthur.nogueraa\Documents\CryptoStake\App\CryptoStake_v3\obj\Debug\CryptoStake_v3.pdb
+C:\Users\arthur.nogueraa\Documents\CryptoStake\App\CryptoStake_v3\obj\Debug\CryptoStake_v3.csproj.AssemblyReference.cache

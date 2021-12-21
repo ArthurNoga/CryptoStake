@@ -110,6 +110,7 @@ namespace CryptoStake_v3
         private void Dtg_transac_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             //txt_achatSearch.Text= valeur de la case cliqué
+            txt_achatSearch.Text = dtg_transac.Rows[e.RowIndex].Cells["id"].Value.ToString();
         }
 
         private void Chk_achatTP_CheckedChanged(object sender, EventArgs e)
@@ -169,7 +170,7 @@ namespace CryptoStake_v3
         public void FillMainDatagrid()
         {
 
-            OracleConnection con = new OracleConnection(ODBC.ConnectionString);
+            OracleConnection con = new OracleConnection("USER ID=SYSTEM;;Password=AZertyui21!;Data Source= localhost:1521 / XE; PERSIST SECURITY INFO = True");
 
             con.Open();
 
@@ -221,6 +222,12 @@ namespace CryptoStake_v3
             da.Fill(ds);
             dtg_transac.DataSource = ds.Tables[0];
 
+        }
+
+        public void FillAchatDatagrid2()
+        {
+
+            (dtg_transac.DataSource as DataTable).DefaultView.RowFilter = string.Format("crypt_nom = '{0}'", txt_achatSearch.Text);
         }
 
 
@@ -325,7 +332,12 @@ namespace CryptoStake_v3
             Application.Exit();
         }
 
+        private void txt_achatSearch_KeyUp(object sender, KeyEventArgs e)
+        {
+            FillAchatDatagrid2();
 
-        
+                
+
+        }
     }
     }
